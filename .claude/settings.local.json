@@ -28,7 +28,10 @@
       "Bash(python mobile_optimize.py)",
       "Bash(grep -l \"menu-toggle\" *.html)",
       "Bash(grep -l \"nav-backdrop\" *.html)",
-      "Bash(grep -l \"mobile menu toggle\" *.html)"
+      "Bash(grep -l \"mobile menu toggle\" *.html)",
+      "Bash(grep -h \"09:30\" \"C:\\\\Users\\\\qkdgh\\\\OneDrive\\\\바탕 화면\\\\AI\\\\오썸의원\"/*.html)",
+      "Bash(sed -i 's|평일 09:30 ~ 20:30 · 토 09:00 ~ 15:00|월·화·금 09:30~18:30 · 수 09:30~20:30 · 토 09:30~15:00 · 목·일 휴무|g' *.html)",
+      "Bash(grep -h \"월·화·금\" *.html)"
     ]
   }
 }
