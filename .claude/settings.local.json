@@ -24,7 +24,11 @@
       "Bash(grep -rl \"성남\\\\|정자일로\\\\|분당\\\\|아이퀘스트\" *.html)",
       "Bash(gh auth:*)",
       "Bash(git --version)",
-      "Bash(git config:*)"
+      "Bash(git config:*)",
+      "Bash(python mobile_optimize.py)",
+      "Bash(grep -l \"menu-toggle\" *.html)",
+      "Bash(grep -l \"nav-backdrop\" *.html)",
+      "Bash(grep -l \"mobile menu toggle\" *.html)"
     ]
   }
 }

@@ -1084,38 +1084,101 @@
       .header-center { text-align: left; }
     }
     @media (max-width: 768px) {
-      .top-bar-inner { padding: 10px 24px; flex-direction: column; gap: 6px; }
-      .top-left { display: none; }
-      .header-inner { padding: 22px 24px; }
-      .header-right .header-cta span { display: none; }
-      .header-cta { padding: 12px; }
-      .nav { overflow-x: auto; padding: 0 16px; justify-content: flex-start; }
-      .nav > li > a { padding: 18px 14px; font-size: 13px; white-space: nowrap; }
-      .dropdown { display: none; }
-
-      .hero { height: 580px; }
-      .slide-content { padding: 0 28px; }
-      .slide-headline { font-size: 32px; }
-      .slide-sub { font-size: 14px; }
-      .slider-arrows { right: 24px; bottom: 28px; }
-      .slider-arrows button { width: 44px; height: 44px; }
+      /* hero */
+      .hero { height: 520px; }
+      .slide-content { padding: 0 20px; }
+      .slide-eyebrow { font-size: 10px; letter-spacing: 5px; margin-bottom: 16px; }
+      .slide-headline { font-size: 28px; line-height: 1.4; margin-bottom: 16px; }
+      .slide-sub { font-size: 13.5px; line-height: 1.8; margin-bottom: 28px;
+        display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+      .slide-cta { padding: 13px 24px; font-size: 13px; }
+      .slider-arrows { right: 16px; bottom: 20px; gap: 8px; }
+      .slider-arrows button { width: 40px; height: 40px; }
       .scroll-hint { display: none; }
-      .slider-nav { bottom: 90px; left: 28px; transform: none; }
-      .slider-progress { width: 120px; }
+      .slider-nav { bottom: 76px; left: 20px; transform: none; }
+      .slider-progress { width: 100px; }
+      .slider-counter { font-size: 11px; }
 
-      .container { padding: 0 24px; }
-      .philosophy, .clinics, .featured, .why, .info { padding: 80px 0; }
-      .quote-band { padding: 80px 0; }
-      .philosophy-grid { grid-template-columns: 1fr; gap: 50px; }
-      .philosophy-features { grid-template-columns: 1fr; gap: 20px; }
-      .clinics-grid, .featured-grid, .why-grid { grid-template-columns: 1fr; gap: 22px; }
+      /* sections */
+      .container { padding: 0 20px; }
+      .philosophy, .clinics, .featured, .why, .info { padding: 64px 0; }
+      .quote-band { padding: 60px 0; }
+      .sec-header { margin-bottom: 40px; }
+      .sec-title { font-size: 24px; line-height: 1.45; }
+      .sec-desc { font-size: 14px; line-height: 1.9; }
+      .sec-eyebrow { font-size: 10px; letter-spacing: 4px; }
 
-      .sec-title { font-size: 28px; }
-      .quote-text { font-size: 22px; }
+      /* philosophy */
+      .philosophy-grid { grid-template-columns: 1fr; gap: 36px; }
+      .philosophy-image { border-radius: 12px; overflow: hidden; }
+      .philosophy-image img { width: 100%; height: 240px; object-fit: cover; }
+      .philosophy-features { grid-template-columns: 1fr; gap: 16px; }
+      .philosophy-feature-num { font-size: 20px; }
+      .philosophy-feature-title { font-size: 14px; }
+      .philosophy-feature-text { font-size: 13px; }
 
-      .footer { padding: 70px 0 30px; }
-      .footer-grid { grid-template-columns: 1fr; gap: 36px; margin-bottom: 50px; }
-      .footer-bottom { flex-direction: column; gap: 14px; text-align: center; }
+      /* quote */
+      .quote-text { font-size: 18px; line-height: 1.75; }
+      .quote-author { font-size: 12px; }
+
+      /* clinics */
+      .clinics-grid { grid-template-columns: 1fr; gap: 14px; }
+      .clinic-card { flex-direction: row; align-items: center; gap: 16px; padding: 18px; }
+      .clinic-card-img { width: 76px; height: 76px; flex-shrink: 0; border-radius: 8px; overflow: hidden; }
+      .clinic-card-img img { width: 100%; height: 100%; object-fit: cover; }
+      .clinic-card-title { font-size: 15px; margin-bottom: 4px; }
+      .clinic-card-desc { font-size: 12.5px; line-height: 1.65;
+        display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+      .clinic-card-link { font-size: 11.5px; margin-top: 6px; }
+
+      /* featured */
+      .featured-grid { grid-template-columns: 1fr; gap: 14px; }
+      .feat-card { display: flex; flex-direction: row; }
+      .feat-thumb { width: 110px; flex-shrink: 0; overflow: hidden; }
+      .feat-thumb img { width: 100%; height: 100%; object-fit: cover; }
+      .feat-tag { font-size: 9px; padding: 3px 8px; }
+      .feat-body { padding: 14px 16px; flex: 1; }
+      .feat-num { font-size: 9px; margin-bottom: 6px; }
+      .feat-title { font-size: 15px; margin-bottom: 2px; }
+      .feat-en { font-size: 10px; margin-bottom: 6px; }
+      .feat-desc { font-size: 12.5px; line-height: 1.65;
+        display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+      .feat-link { font-size: 11px; margin-top: 8px; }
+
+      /* why */
+      .why-header { grid-template-columns: 1fr; gap: 16px; margin-bottom: 36px; }
+      .why-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+      .why-thumb { height: 130px; overflow: hidden; }
+      .why-thumb img { width: 100%; height: 100%; object-fit: cover; }
+      .why-body { padding: 14px; }
+      .why-num { font-size: 10px; margin-bottom: 5px; }
+      .why-title { font-size: 13.5px; margin-bottom: 5px; }
+      .why-text { font-size: 12px; line-height: 1.65; }
+
+      /* hours */
+      .info-grid { grid-template-columns: 1fr; gap: 20px; }
+      .hours-card { padding: 34px 24px; }
+      .hours-title { font-size: 22px; }
+      .hours-item { padding: 12px 0; font-size: 13px; }
+      .hours-time { font-size: 13.5px; }
+      .hours-phone { font-size: 20px; }
+      .hours-phone-sub { font-size: 11px; }
+      .hours-buttons { flex-direction: column; gap: 10px; }
+      .hours-btn { width: 100%; text-align: center; padding: 13px; font-size: 13px; }
+      .map-frame { height: 240px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero { height: 460px; }
+      .slide-headline { font-size: 23px; }
+      .sec-title { font-size: 21px; }
+      .why-grid { grid-template-columns: 1fr; }
+      .why-thumb { height: 180px; }
+      .feat-card { flex-direction: column; }
+      .feat-thumb { width: 100%; height: 160px; aspect-ratio: unset; }
+      .clinic-card { flex-direction: column; align-items: flex-start; }
+      .clinic-card-img { width: 100%; height: 150px; }
+      .hours-card { padding: 24px 18px; }
     }
   </style>
 </head>
@@ -1152,6 +1215,9 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           <span>예약 / 상담</span>
         </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="메뉴">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
@@ -1226,6 +1292,8 @@
       <li><a href="smoking-cessation.html">금연클리닉</a></li>
     </ul>
   </div>
+  <!-- Mobile nav backdrop -->
+  <div class="nav-backdrop" id="navBackdrop"></div>
 
   <!-- ═══════════════════════════════════════════════
        HERO SLIDER
@@ -1769,6 +1837,30 @@
       if (window.scrollY > 600) toTop.classList.add('show');
       else toTop.classList.remove('show');
     });
+
+    // Mobile menu toggle
+    (function(){
+      var toggle = document.getElementById('menuToggle');
+      var navWrap = document.getElementById('navWrapper');
+      var backdrop = document.getElementById('navBackdrop');
+      if (!toggle) return;
+      function closeMenu(){
+        toggle.classList.remove('active');
+        navWrap.classList.remove('nav-open');
+        backdrop.classList.remove('active');
+        document.body.classList.remove('nav-open');
+      }
+      toggle.addEventListener('click', function(){
+        var isOpen = navWrap.classList.contains('nav-open');
+        if (isOpen) { closeMenu(); } else {
+          toggle.classList.add('active');
+          navWrap.classList.add('nav-open');
+          backdrop.classList.add('active');
+          document.body.classList.add('nav-open');
+        }
+      });
+      backdrop.addEventListener('click', closeMenu);
+    })();
   </script>
 
   <!-- ═══════════════════════════════════════════════

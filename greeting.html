@@ -157,36 +157,36 @@
     }
 
     /* ═══ 모바일 반응형 ═══ */
-    @media (max-width: 860px) {
-      .greeting-hero {
-        padding: 70px 24px 60px;
-      }
-      .greeting-hero-title {
-        font-size: 34px;
-      }
-      .greeting-section {
-        padding: 48px 20px 64px;
-      }
-      .greeting-card {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 768px) {
+      .greeting-hero { padding: 60px 20px 52px; }
+      .greeting-hero-brand { font-size: 10px; letter-spacing: 7px; }
+      .greeting-hero-title { font-size: 30px; }
+      .greeting-hero-dots { font-size: 11px; letter-spacing: 6px; }
+      .greeting-hero-sub { font-size: 14px; line-height: 1.85; }
+      .greeting-section { padding: 44px 20px 60px; }
+      .greeting-card { grid-template-columns: 1fr; }
       .greeting-image-col {
         order: -1;
-        min-height: 280px;
+        min-height: 260px;
         position: relative;
       }
-      .greeting-image-col img {
-        position: absolute;
-      }
-      .greeting-text-col {
-        padding: 44px 28px 48px;
-      }
-      .greeting-doctor-prefix {
-        font-size: 30px;
-      }
-      .greeting-doctor-name {
-        font-size: 22px;
-      }
+      .greeting-image-col img { position: absolute; }
+      .greeting-text-col { padding: 36px 24px 40px; }
+      .greeting-sub-label { font-size: 10px; letter-spacing: 5px; }
+      .greeting-doctor-prefix { font-size: 30px; }
+      .greeting-doctor-name { font-size: 22px; }
+      .greeting-body { font-size: 14px; line-height: 1.95; }
+      .greeting-sign-text { font-size: 11px; letter-spacing: 2px; }
+    }
+    @media (max-width: 480px) {
+      .greeting-hero { padding: 50px 16px 44px; }
+      .greeting-hero-title { font-size: 26px; }
+      .greeting-section { padding: 36px 16px 52px; }
+      .greeting-image-col { min-height: 220px; }
+      .greeting-text-col { padding: 28px 20px 32px; }
+      .greeting-doctor-prefix { font-size: 26px; }
+      .greeting-doctor-name { font-size: 19px; }
+      .greeting-body { font-size: 13.5px; }
     }
   </style>
 </head>
@@ -219,6 +219,9 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           <span>예약 / 상담</span>
         </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="메뉴">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
@@ -290,6 +293,8 @@
       <li><a href="smoking-cessation.html">금연클리닉</a></li>
     </ul>
   </div>
+  <!-- Mobile nav backdrop -->
+  <div class="nav-backdrop" id="navBackdrop"></div>
 
   <!-- ═══ GREETING HERO ═══ -->
   <section class="greeting-hero">
@@ -422,6 +427,30 @@
       if (window.scrollY > 400) toTop.classList.add('show');
       else toTop.classList.remove('show');
     });
+
+    // Mobile menu toggle
+    (function(){
+      var toggle = document.getElementById('menuToggle');
+      var navWrap = document.getElementById('navWrapper');
+      var backdrop = document.getElementById('navBackdrop');
+      if (!toggle) return;
+      function closeMenu(){
+        toggle.classList.remove('active');
+        navWrap.classList.remove('nav-open');
+        backdrop.classList.remove('active');
+        document.body.classList.remove('nav-open');
+      }
+      toggle.addEventListener('click', function(){
+        var isOpen = navWrap.classList.contains('nav-open');
+        if (isOpen) { closeMenu(); } else {
+          toggle.classList.add('active');
+          navWrap.classList.add('nav-open');
+          backdrop.classList.add('active');
+          document.body.classList.add('nav-open');
+        }
+      });
+      backdrop.addEventListener('click', closeMenu);
+    })();
   </script>
 
 </body>
