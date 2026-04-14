@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오썸의원 · AWESOME CLINIC</title>
+  <meta name="description" content="오썸의원은 비만/체형, 피부, 항노화, 예방접종, 금연 클리닉을 1:1 맞춤으로 진료하는 종합 메디컬 클리닉입니다.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=Noto+Serif+KR:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* ═══════════════════════════════════════════════════
+       OSSOM CLINIC · PREMIUM HOMEPAGE
+       ═══════════════════════════════════════════════════ */
+
+    :root {
+      /* Primary palette - Deep emerald */
+      --emerald-900: #0a3d28;
+      --emerald-800: #0e5236;
+      --emerald-700: #156944;
+      --emerald-600: #1c8456;
+      --emerald-500: #2ea372;
+      --emerald-100: #e6f3ec;
+      --emerald-50:  #f3faf6;
+
+      /* Accent - Champagne gold */
+      --gold-700:    #9a7e2c;
+      --gold-600:    #b8973a;
+      --gold-500:    #c9a84c;
+      --gold-400:    #d4b97a;
+      --gold-200:    #ecdda9;
+      --gold-50:     #faf6ec;
+
+      /* Neutrals */
+      --ivory:       #faf8f3;
+      --cream:       #f5f1e8;
+      --paper:       #fcfbf7;
+      --bone:        #ebe6d8;
+      --line:        #e8e2d1;
+      --line-soft:   #f0ece0;
+
+      /* Text */
+      --ink:         #15211b;
+      --ink-soft:    #3a4842;
+      --ink-mid:     #5a6660;
+      --ink-light:   #8a9590;
+      --ink-faint:   #b8c0bb;
+
+      --shadow-sm: 0 2px 8px rgba(15,33,27,0.06);
+      --shadow-md: 0 12px 32px rgba(15,33,27,0.08);
+      --shadow-lg: 0 28px 64px rgba(15,33,27,0.12);
+      --shadow-xl: 0 40px 90px rgba(15,33,27,0.16);
+
+      --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+      font-weight: 400;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { display: block; max-width: 100%; height: auto; }
+    button { border: none; background: none; cursor: pointer; font: inherit; color: inherit; }
+
+    .serif-en { font-family: 'Playfair Display', 'Cormorant Garamond', serif; }
+    .serif-kr { font-family: 'Noto Serif KR', serif; }
+
+    /* ═══ TOP BAR ═══ */
+    .top-bar {
+      background: var(--emerald-900);
+      color: rgba(255,255,255,0.85);
+      font-size: 12.5px;
+      letter-spacing: 0.3px;
+    }
+    .top-bar-inner {
+      max-width: 1320px; margin: 0 auto;
+      padding: 11px 40px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .top-left { display: flex; gap: 28px; align-items: center; }
+    .top-left span { display: flex; align-items: center; gap: 7px; }
+    .top-left svg { width: 13px; height: 13px; opacity: 0.7; }
+    .top-right { display: flex; gap: 22px; align-items: center; }
+    .top-right a {
+      display: inline-flex; align-items: center; gap: 7px;
+      transition: color 0.25s var(--ease);
+    }
+    .top-right a:hover { color: var(--gold-400); }
+    .top-right svg { width: 13px; height: 13px; }
+    .divider-v { width: 1px; height: 12px; background: rgba(255,255,255,0.18); }
+
+    /* ═══ HEADER ═══ */
+    .header {
+      background: #fff;
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .header-inner {
+      max-width: 1320px; margin: 0 auto;
+      padding: 26px 40px;
+      display: grid; grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+    .header-left {
+      font-family: 'Playfair Display', serif;
+      font-size: 11px; letter-spacing: 5px;
+      color: var(--ink-light); text-transform: uppercase;
+      font-style: italic;
+    }
+    .header-center { text-align: center; }
+    .header-center img { max-height: 62px; margin: 0 auto; }
+    .header-right {
+      display: flex; justify-content: flex-end; align-items: center; gap: 14px;
+    }
+    .header-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 11px 22px;
+      background: var(--emerald-800); color: #fff;
+      font-size: 12.5px; font-weight: 600; letter-spacing: 0.3px;
+      border-radius: 100px;
+      transition: all 0.3s var(--ease);
+    }
+    .header-cta:hover {
+      background: var(--gold-500); color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(201,168,76,0.3);
+    }
+    .header-cta svg { width: 13px; height: 13px; }
+
+    /* ═══ NAVIGATION ═══ */
+    .nav-wrapper {
+      background: #fff;
+      border-bottom: 1px solid var(--line-soft);
+      position: sticky; top: 0; z-index: 500;
+      transition: box-shadow 0.3s var(--ease);
+    }
+    .nav-wrapper.scrolled { box-shadow: 0 8px 32px rgba(15,33,27,0.08); }
+    .nav {
+      max-width: 1320px; margin: 0 auto;
+      display: flex; justify-content: center; align-items: stretch;
+      padding: 0 40px;
+    }
+    .nav > li { position: relative; }
+    .nav > li > a {
+      display: flex; align-items: center;
+      padding: 22px 28px;
+      font-size: 14px; font-weight: 600; color: var(--ink);
+      letter-spacing: -0.1px;
+      position: relative;
+      transition: color 0.3s var(--ease);
+    }
+    .nav > li > a::before {
+      content: ''; position: absolute;
+      bottom: 0; left: 50%; right: 50%; height: 2px;
+      background: var(--gold-500);
+      transition: left 0.4s var(--ease), right 0.4s var(--ease);
+    }
+    .nav > li:hover > a { color: var(--emerald-700); }
+    .nav > li:hover > a::before { left: 28px; right: 28px; }
+
+    .dropdown {
+      position: absolute; top: 100%; left: 50%;
+      transform: translateX(-50%) translateY(8px);
+      min-width: 200px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-lg);
+      opacity: 0; visibility: hidden;
+      transition: all 0.3s var(--ease);
+      z-index: 600;
+      padding: 12px 0;
+    }
+    .nav > li:hover .dropdown {
+      opacity: 1; visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    .dropdown::before {
+      content: ''; position: absolute;
+      top: -5px; left: 50%; transform: translateX(-50%) rotate(45deg);
+      width: 10px; height: 10px;
+      background: #fff;
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+    .dropdown li a {
+      display: block;
+      padding: 12px 24px;
+      font-size: 13.5px; font-weight: 400; color: var(--ink-mid);
+      transition: all 0.25s var(--ease);
+      position: relative;
+    }
+    .dropdown li a::before {
+      content: ''; position: absolute;
+      left: 14px; top: 50%; transform: translateY(-50%);
+      width: 4px; height: 4px; border-radius: 50%;
+      background: var(--gold-500);
+      opacity: 0;
+      transition: opacity 0.25s var(--ease);
+    }
+    .dropdown li a:hover {
+      background: var(--ivory);
+      color: var(--emerald-700);
+      padding-left: 32px;
+      font-weight: 500;
+    }
+    .dropdown li a:hover::before { opacity: 1; }
+
+    /* ═══ HERO SLIDER ═══ */
+    .hero {
+      position: relative;
+      width: 100%; height: 720px;
+      overflow: hidden;
+      background: var(--emerald-900);
+    }
+    .slide {
+      position: absolute; inset: 0;
+      opacity: 0;
+      transition: opacity 1.4s var(--ease);
+    }
+    .slide.active { opacity: 1; z-index: 2; }
+
+    .slide-bg {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      transform: scale(1.08);
+      transition: transform 8s ease-out;
+    }
+    .slide.active .slide-bg { transform: scale(1); }
+    .slide-bg::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(105deg,
+        rgba(10,40,28,0.72) 0%,
+        rgba(10,40,28,0.45) 45%,
+        rgba(10,40,28,0.15) 100%);
+    }
+
+    .slide-content {
+      position: relative; z-index: 3;
+      max-width: 1320px;
+      height: 100%; margin: 0 auto;
+      padding: 0 80px;
+      display: flex; align-items: center;
+    }
+    .slide-text {
+      max-width: 620px;
+      color: #fff;
+      transform: translateY(40px);
+      opacity: 0;
+      transition: all 1.2s var(--ease) 0.4s;
+    }
+    .slide.active .slide-text { transform: translateY(0); opacity: 1; }
+
+    .slide-eyebrow {
+      display: inline-flex; align-items: center; gap: 14px;
+      font-family: 'Playfair Display', serif;
+      font-size: 12px; font-weight: 500; letter-spacing: 6px;
+      color: var(--gold-400);
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+    .slide-eyebrow::before {
+      content: ''; width: 36px; height: 1px;
+      background: var(--gold-400);
+    }
+    .slide-headline {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 56px; font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin-bottom: 26px;
+      text-shadow: 0 2px 24px rgba(0,0,0,0.2);
+    }
+    .slide-headline em {
+      font-style: normal;
+      color: var(--gold-400);
+      font-weight: 700;
+    }
+    .slide-sub {
+      font-size: 16px;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.88);
+      font-weight: 300;
+      margin-bottom: 38px;
+      max-width: 520px;
+    }
+    .slide-cta {
+      display: inline-flex; align-items: center; gap: 14px;
+      padding: 18px 38px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.4);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      font-size: 13px; font-weight: 500; letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: all 0.4s var(--ease);
+    }
+    .slide-cta:hover {
+      background: var(--gold-500);
+      border-color: var(--gold-500);
+      padding-right: 48px;
+    }
+    .slide-cta svg {
+      width: 14px; height: 14px;
+      transition: transform 0.4s var(--ease);
+    }
+    .slide-cta:hover svg { transform: translateX(6px); }
+
+    /* Slider controls */
+    .slider-nav {
+      position: absolute; bottom: 50px; left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      display: flex; align-items: center; gap: 24px;
+    }
+    .slider-counter {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px; color: rgba(255,255,255,0.6);
+      letter-spacing: 2px;
+      font-style: italic;
+    }
+    .slider-counter .current { color: #fff; font-size: 18px; font-weight: 600; }
+    .slider-progress {
+      width: 200px; height: 1px;
+      background: rgba(255,255,255,0.2);
+      position: relative;
+    }
+    .slider-progress-bar {
+      position: absolute; left: 0; top: 0; height: 100%;
+      background: var(--gold-400);
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+    .slider-arrows {
+      position: absolute; bottom: 40px; right: 60px;
+      display: flex; gap: 12px;
+      z-index: 10;
+    }
+    .slider-arrows button {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.3s var(--ease);
+    }
+    .slider-arrows button:hover {
+      background: var(--gold-500);
+      border-color: var(--gold-500);
+      transform: scale(1.05);
+    }
+    .slider-arrows svg { width: 16px; height: 16px; }
+
+    /* Scroll hint */
+    .scroll-hint {
+      position: absolute; bottom: 40px; left: 60px;
+      z-index: 10;
+      font-family: 'Playfair Display', serif;
+      font-size: 11px; letter-spacing: 3px;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      display: flex; align-items: center; gap: 14px;
+    }
+    .scroll-hint::after {
+      content: ''; width: 1px; height: 50px;
+      background: linear-gradient(to bottom, var(--gold-400), transparent);
+      animation: scrollLine 2s ease-in-out infinite;
+    }
+    @keyframes scrollLine {
+      0%, 100% { transform: scaleY(1); transform-origin: top; }
+      50% { transform: scaleY(0.4); transform-origin: top; }
+    }
+
+    /* ═══ SECTION COMMON ═══ */
+    section { position: relative; }
+    .container {
+      max-width: 1320px; margin: 0 auto;
+      padding: 0 60px;
+    }
+    .sec-eyebrow {
+      display: inline-flex; align-items: center; gap: 14px;
+      font-family: 'Playfair Display', serif;
+      font-size: 12px; font-weight: 500; letter-spacing: 5px;
+      color: var(--gold-600);
+      text-transform: uppercase;
+      font-style: italic;
+      margin-bottom: 22px;
+    }
+    .sec-eyebrow::before, .sec-eyebrow::after {
+      content: ''; width: 32px; height: 1px;
+      background: var(--gold-500);
+    }
+    .sec-eyebrow.left::after { display: none; }
+    .sec-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 44px; font-weight: 600;
+      color: var(--ink);
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      margin-bottom: 22px;
+    }
+    .sec-title em { font-style: normal; color: var(--emerald-700); font-weight: 700; }
+    .sec-desc {
+      font-size: 16px; color: var(--ink-mid);
+      line-height: 1.95; font-weight: 300;
+      max-width: 640px;
+    }
+    .sec-header { text-align: center; padding: 0 0 64px; }
+    .sec-header .sec-eyebrow { justify-content: center; }
+    .sec-header .sec-desc { margin: 0 auto; }
+
+    /* ═══ SECTION 1 · PHILOSOPHY ═══ */
+    .philosophy {
+      padding: 140px 0;
+      background: var(--paper);
+      overflow: hidden;
+    }
+    .philosophy-grid {
+      display: grid; grid-template-columns: 1fr 1.05fr;
+      gap: 90px;
+      align-items: center;
+    }
+    .philosophy-image {
+      position: relative;
+      aspect-ratio: 4/5;
+    }
+    .philosophy-image img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      box-shadow: var(--shadow-xl);
+    }
+    .philosophy-image::before {
+      content: ''; position: absolute;
+      top: -28px; left: -28px;
+      right: 60px; bottom: 60px;
+      border: 1px solid var(--gold-500);
+      z-index: -1;
+    }
+    .philosophy-image::after {
+      content: 'EST. AWESOME';
+      position: absolute;
+      bottom: -20px; right: -10px;
+      background: var(--ivory);
+      padding: 14px 28px;
+      font-family: 'Playfair Display', serif;
+      font-size: 12px; letter-spacing: 4px;
+      color: var(--gold-600);
+      font-style: italic;
+      box-shadow: var(--shadow-md);
+    }
+
+    .philosophy-text .sec-title { margin-bottom: 32px; }
+    .philosophy-text .sec-title em { color: var(--gold-600); }
+    .philosophy-text .sec-desc { margin-bottom: 36px; }
+    .philosophy-features {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 48px;
+      padding-top: 48px;
+      border-top: 1px solid var(--line);
+    }
+    .philosophy-feature {
+      display: flex; gap: 18px; align-items: flex-start;
+    }
+    .philosophy-feature-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px; font-weight: 500;
+      color: var(--gold-500);
+      font-style: italic;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .philosophy-feature-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 16px; font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .philosophy-feature-text {
+      font-size: 13px; color: var(--ink-mid);
+      line-height: 1.75; font-weight: 300;
+    }
+
+    /* ═══ SECTION 2 · SPECIAL CLINICS ═══ */
+    .clinics {
+      padding: 140px 0;
+      background: var(--ivory);
+    }
+    .clinics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .clinic-card {
+      position: relative;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+      transition: transform 0.6s var(--ease), box-shadow 0.6s var(--ease);
+    }
+    .clinic-card:hover {
+      transform: translateY(-12px);
+      box-shadow: var(--shadow-xl);
+    }
+    .clinic-card img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 1.4s var(--ease);
+    }
+    .clinic-card:hover img { transform: scale(1.08); }
+    .clinic-card::before {
+      content: ''; position: absolute; inset: 0; z-index: 2;
+      background: linear-gradient(180deg,
+        rgba(10,40,28,0) 35%,
+        rgba(10,40,28,0.65) 75%,
+        rgba(10,40,28,0.92) 100%);
+    }
+    .clinic-card-body {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      z-index: 3;
+      padding: 44px 36px 40px;
+      color: #fff;
+    }
+    .clinic-card-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px; font-style: italic;
+      color: var(--gold-400);
+      letter-spacing: 3px;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .clinic-card-en {
+      font-family: 'Playfair Display', serif;
+      font-size: 12px; letter-spacing: 4px;
+      color: rgba(255,255,255,0.75);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .clinic-card-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 26px; font-weight: 700;
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+    .clinic-card-desc {
+      font-size: 13.5px;
+      line-height: 1.85;
+      color: rgba(255,255,255,0.82);
+      font-weight: 300;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s var(--ease), margin 0.5s var(--ease);
+    }
+    .clinic-card:hover .clinic-card-desc {
+      max-height: 100px;
+      margin-top: 6px;
+    }
+    .clinic-card-arrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      margin-top: 22px;
+      font-family: 'Playfair Display', serif;
+      font-size: 12px; font-style: italic;
+      color: var(--gold-400);
+      letter-spacing: 1px;
+    }
+    .clinic-card-arrow svg { width: 16px; height: 1px; }
+    .clinic-card-arrow::after {
+      content: ''; width: 24px; height: 1px;
+      background: var(--gold-400);
+      transition: width 0.4s var(--ease);
+    }
+    .clinic-card:hover .clinic-card-arrow::after { width: 50px; }
+
+    /* ═══ SECTION 3 · QUOTE BAND ═══ */
+    .quote-band {
+      padding: 130px 0;
+      background: var(--emerald-900);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .quote-band::before {
+      content: ''; position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image: url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover; background-position: center;
+      opacity: 0.12;
+    }
+    .quote-band::after {
+      content: '"';
+      position: absolute;
+      top: 40px; left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Playfair Display', serif;
+      font-size: 240px;
+      color: var(--gold-500);
+      opacity: 0.15;
+      line-height: 1;
+      font-style: italic;
+    }
+    .quote-band-inner {
+      position: relative; z-index: 2;
+      max-width: 920px; margin: 0 auto;
+      padding: 0 60px;
+      text-align: center;
+    }
+    .quote-eyebrow {
+      font-family: 'Playfair Display', serif;
+      font-size: 12px; letter-spacing: 6px;
+      color: var(--gold-400);
+      text-transform: uppercase;
+      font-style: italic;
+      margin-bottom: 32px;
+      display: inline-block;
+    }
+    .quote-text {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 36px; font-weight: 500;
+      line-height: 1.65;
+      letter-spacing: -0.01em;
+      margin-bottom: 36px;
+    }
+    .quote-text strong {
+      color: var(--gold-400);
+      font-weight: 700;
+    }
+    .quote-divider {
+      width: 56px; height: 1px;
+      background: var(--gold-500);
+      margin: 0 auto 28px;
+    }
+    .quote-author {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px; font-style: italic;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 1.5px;
+    }
+
+    /* ═══ SECTION 4 · FEATURED TREATMENTS ═══ */
+    .featured {
+      padding: 140px 0;
+      background: var(--paper);
+    }
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+      margin-top: 30px;
+    }
+    .feat-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      transition: all 0.5s var(--ease);
+      cursor: pointer;
+    }
+    .feat-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-xl);
+      border-color: transparent;
+    }
+    .feat-thumb {
+      position: relative;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+    .feat-thumb img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 1.4s var(--ease);
+    }
+    .feat-card:hover .feat-thumb img { transform: scale(1.08); }
+    .feat-tag {
+      position: absolute; top: 24px; left: 24px;
+      padding: 7px 14px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(6px);
+      font-family: 'Playfair Display', serif;
+      font-size: 11px; letter-spacing: 2px;
+      color: var(--emerald-800);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .feat-body {
+      padding: 36px 32px 38px;
+    }
+    .feat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px; color: var(--gold-600);
+      letter-spacing: 2px;
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+    .feat-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 24px; font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+    .feat-en {
+      font-family: 'Playfair Display', serif;
+      font-size: 11px; letter-spacing: 2.5px;
+      color: var(--ink-light);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .feat-desc {
+      font-size: 14px; color: var(--ink-mid);
+      line-height: 1.85; font-weight: 300;
+      margin-bottom: 26px;
+    }
+    .feat-link {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-family: 'Playfair Display', serif;
+      font-size: 12px; letter-spacing: 2px;
+      color: var(--emerald-700);
+      text-transform: uppercase;
+      font-weight: 600;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--gold-500);
+      transition: all 0.3s var(--ease);
+    }
+    .feat-link:hover {
+      color: var(--gold-600);
+      gap: 18px;
+    }
+
+    /* ═══ SECTION 5 · WHY US (4 cols) ═══ */
+    .why {
+      padding: 140px 0;
+      background: var(--ivory);
+    }
+    .why-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: end;
+      margin-bottom: 70px;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .why-card {
+      background: #fff;
+      padding: 0;
+      border: 1px solid var(--line);
+      transition: all 0.5s var(--ease);
+      overflow: hidden;
+    }
+    .why-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+    .why-thumb {
+      aspect-ratio: 5/4;
+      overflow: hidden;
+      position: relative;
+    }
+    .why-thumb img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 1.4s var(--ease);
+    }
+    .why-card:hover .why-thumb img { transform: scale(1.08); }
+    .why-thumb::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(10,40,28,0.4) 100%);
+    }
+    .why-body {
+      padding: 32px 28px 34px;
+    }
+    .why-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px; color: var(--gold-600);
+      font-style: italic;
+      margin-bottom: 14px;
+      letter-spacing: 2px;
+    }
+    .why-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 19px; font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    .why-text {
+      font-size: 13px; color: var(--ink-mid);
+      line-height: 1.85; font-weight: 300;
+    }
+
+    /* ═══ SECTION 6 · INFO (Hours & Map) ═══ */
+    .info {
+      padding: 140px 0;
+      background: var(--paper);
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 50px;
+      align-items: stretch;
+    }
+    .hours-card {
+      background: var(--emerald-900);
+      color: #fff;
+      padding: 56px 44px 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hours-card::before {
+      content: ''; position: absolute;
+      top: -100px; right: -100px;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%);
+    }
+    .hours-eyebrow {
+      font-family: 'Playfair Display', serif;
+      font-size: 12px; letter-spacing: 5px;
+      color: var(--gold-400);
+      text-transform: uppercase;
+      font-style: italic;
+      margin-bottom: 14px;
+      position: relative;
+    }
+    .hours-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 30px; font-weight: 700;
+      margin-bottom: 32px;
+      position: relative;
+      letter-spacing: -0.02em;
+    }
+    .hours-divider {
+      width: 40px; height: 1px;
+      background: var(--gold-500);
+      margin-bottom: 32px;
+    }
+    .hours-list {
+      position: relative;
+      margin-bottom: 36px;
+    }
+    .hours-item {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 14px;
+    }
+    .hours-day {
+      font-weight: 500;
+      color: rgba(255,255,255,0.92);
+    }
+    .hours-time-wrap {
+      display: flex; flex-direction: column; align-items: flex-end; gap: 4px;
+    }
+    .hours-time {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold-400);
+      font-size: 15px;
+      letter-spacing: 0.5px;
+    }
+    .hours-time.closed { color: #e8a4a4; }
+    .hours-break {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 11px;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0;
+    }
+
+    .hours-contact {
+      position: relative;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .hours-phone {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      letter-spacing: 1px;
+      color: #fff;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+    .hours-phone-sub {
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    .hours-buttons { display: flex; gap: 10px; }
+    .hours-btn {
+      flex: 1;
+      padding: 14px;
+      text-align: center;
+      font-size: 12px; letter-spacing: 1.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: all 0.3s var(--ease);
+    }
+    .hours-btn-1 {
+      background: var(--gold-500); color: var(--emerald-900);
+    }
+    .hours-btn-1:hover { background: var(--gold-400); }
+    .hours-btn-2 {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+    }
+    .hours-btn-2:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    .map-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      display: flex; flex-direction: column;
+    }
+    .map-card-header {
+      padding: 32px 36px 26px;
+      border-bottom: 1px solid var(--line);
+    }
+    .map-card-eyebrow {
+      font-family: 'Playfair Display', serif;
+      font-size: 11px; letter-spacing: 4px;
+      color: var(--gold-600);
+      text-transform: uppercase;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    .map-card-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 22px; font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .map-card-addr {
+      font-size: 13.5px; color: var(--ink-mid);
+      line-height: 1.7;
+    }
+    .map-frame {
+      flex: 1;
+      min-height: 380px;
+      background: var(--ivory);
+    }
+    .map-frame .root_daum_roughmap { width: 100% !important; }
+    .map-frame iframe { width: 100% !important; display: block; }
+
+    /* ═══ FOOTER ═══ */
+    .footer {
+      background: var(--emerald-900);
+      color: rgba(255,255,255,0.7);
+      padding: 100px 0 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .footer::before {
+      content: ''; position: absolute;
+      top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-500), transparent);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 70px;
+    }
+    .footer-brand img {
+      max-height: 44px;
+      filter: brightness(0) invert(1);
+      opacity: 0.85;
+      margin-bottom: 24px;
+    }
+    .footer-tagline {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px; font-style: italic;
+      color: var(--gold-400);
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .footer-desc {
+      font-size: 13px; line-height: 1.85;
+      color: rgba(255,255,255,0.55);
+      max-width: 320px;
+      font-weight: 300;
+    }
+    .footer-col-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 12px; letter-spacing: 3px;
+      color: var(--gold-400);
+      text-transform: uppercase;
+      font-style: italic;
+      margin-bottom: 22px;
+    }
+    .footer-col ul li {
+      margin-bottom: 12px;
+    }
+    .footer-col ul li a {
+      font-size: 13px; color: rgba(255,255,255,0.6);
+      transition: color 0.25s var(--ease);
+    }
+    .footer-col ul li a:hover { color: var(--gold-400); }
+    .footer-info-line {
+      font-size: 13px; line-height: 1.95;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 6px;
+    }
+    .footer-info-line strong { color: rgba(255,255,255,0.85); font-weight: 500; }
+    .footer-bottom {
+      padding-top: 36px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+    .footer-bottom-left {
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 1.5px;
+      font-style: italic;
+    }
+
+    /* ═══ FLOATING ACTIONS ═══ */
+    .float-actions {
+      position: fixed; right: 28px; bottom: 28px;
+      display: flex; flex-direction: column; gap: 10px;
+      z-index: 990;
+    }
+    .float-btn {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: var(--emerald-700);
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 12px 32px rgba(15,33,27,0.3);
+      transition: all 0.3s var(--ease);
+    }
+    .float-btn:hover {
+      background: var(--gold-500);
+      transform: translateY(-4px);
+    }
+    .float-btn.kakao { background: #FEE500; color: #3C1E1E; }
+    .float-btn.kakao:hover { background: #FFD400; }
+    .float-btn svg { width: 22px; height: 22px; }
+    .float-btn.top {
+      opacity: 0; visibility: hidden;
+      pointer-events: none;
+    }
+    .float-btn.top.show {
+      opacity: 1; visibility: visible;
+      pointer-events: auto;
+    }
+
+    /* ═══ RESPONSIVE ═══ */
+    @media (max-width: 1200px) {
+      .nav > li > a { padding: 22px 18px; font-size: 13.5px; }
+      .container { padding: 0 40px; }
+      .slide-content { padding: 0 60px; }
+      .slide-headline { font-size: 46px; }
+      .sec-title { font-size: 36px; }
+      .philosophy-grid { gap: 60px; }
+    }
+    @media (max-width: 980px) {
+      .clinics-grid, .featured-grid, .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .why-header { grid-template-columns: 1fr; gap: 24px; }
+      .info-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .header-left { display: none; }
+      .header-inner { grid-template-columns: 1fr auto; }
+      .header-center { text-align: left; }
+    }
+    @media (max-width: 768px) {
+      .top-bar-inner { padding: 10px 24px; flex-direction: column; gap: 6px; }
+      .top-left { display: none; }
+      .header-inner { padding: 22px 24px; }
+      .header-right .header-cta span { display: none; }
+      .header-cta { padding: 12px; }
+      .nav { overflow-x: auto; padding: 0 16px; justify-content: flex-start; }
+      .nav > li > a { padding: 18px 14px; font-size: 13px; white-space: nowrap; }
+      .dropdown { display: none; }
+
+      .hero { height: 580px; }
+      .slide-content { padding: 0 28px; }
+      .slide-headline { font-size: 32px; }
+      .slide-sub { font-size: 14px; }
+      .slider-arrows { right: 24px; bottom: 28px; }
+      .slider-arrows button { width: 44px; height: 44px; }
+      .scroll-hint { display: none; }
+      .slider-nav { bottom: 90px; left: 28px; transform: none; }
+      .slider-progress { width: 120px; }
+
+      .container { padding: 0 24px; }
+      .philosophy, .clinics, .featured, .why, .info { padding: 80px 0; }
+      .quote-band { padding: 80px 0; }
+      .philosophy-grid { grid-template-columns: 1fr; gap: 50px; }
+      .philosophy-features { grid-template-columns: 1fr; gap: 20px; }
+      .clinics-grid, .featured-grid, .why-grid { grid-template-columns: 1fr; gap: 22px; }
+
+      .sec-title { font-size: 28px; }
+      .quote-text { font-size: 22px; }
+
+      .footer { padding: 70px 0 30px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 36px; margin-bottom: 50px; }
+      .footer-bottom { flex-direction: column; gap: 14px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       TOP BAR
+       ═══════════════════════════════════════════════ -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="top-left">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 평일 09:30 ~ 20:30 · 토 09:00 ~ 15:00</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> 경기 고양시 일산동구 정발산로 23 3층 301호</span>
+      </div>
+      <div class="top-right">
+        <a href="tel:0319019909"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg> 031.901.9909</a>
+        <span class="divider-v"></span>
+        <a href="http://pf.kakao.com/_wPhDxl" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.58 2 10.94c0 2.8 1.86 5.27 4.66 6.67-.15.56-.96 3.58-1 3.73 0 .07.03.14.09.18.04.03.1.04.18-.01.25-.17 3.7-2.45 4.23-2.8.6.09 1.22.13 1.84.13 5.52 0 10-3.58 10-7.9S17.52 3 12 3z"/></svg> Kakao 상담</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════════════ -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-left">Premium Medical Clinic</div>
+      <div class="header-center">
+        <a href="#"><img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/8063c728fb8a8.png" alt="오썸의원"></a>
+      </div>
+      <div class="header-right">
+        <a href="#info" class="header-cta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>예약 / 상담</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════════ -->
+  <div class="nav-wrapper" id="navWrapper">
+    <ul class="nav">
+      <li>
+        <a href="#">오썸클리닉 소개</a>
+        <ul class="dropdown">
+          <li><a href="greeting.html">인사말</a></li>
+          <li><a href="#info">진료안내 / 오시는길</a></li>
+          <li><a href="#">클리닉 둘러보기</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">비만 / 체형클리닉</a>
+        <ul class="dropdown">
+          <li><a href="obesity-drug.html">비만약</a></li>
+          <li><a href="carboxy.html">카복시</a></li>
+          <li><a href="medium-frequency.html">중저주파</a></li>
+          <li><a href="high-frequency.html">고주파</a></li>
+          <li><a href="endermologie.html">엔더몰로지</a></li>
+          <li><a href="line-meso.html">라인메조주사</a></li>
+          <li><a href="hpl.html">나봄 HPL 주사</a></li>
+          <li><a href="micool.html">미쿨</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">피부클리닉</a>
+        <ul class="dropdown">
+          <li><a href="skin-pigment.html">기미 / 색소</a></li>
+          <li><a href="o2derm.html">오투덤 산소테라피</a></li>
+          <li><a href="andy-toning.html">앤디눈꽃토닝</a></li>
+          <li><a href="acne-scar.html">여드름 / 흉터</a></li>
+          <li><a href="wrinkle.html">주름 / 탄력</a></li>
+          <li><a href="redness.html">홍조 / 혈관</a></li>
+          <li><a href="injection-135.html">135주사</a></li>
+          <li><a href="scarlet.html">스칼렛</a></li>
+          <li><a href="doublo-gold.html">더블로골드</a></li>
+          <li><a href="orion.html">오리온</a></li>
+          <li><a href="shemax.html">쉬맥스</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">항노화 / 비타민</a>
+        <ul class="dropdown">
+          <li><a href="garlic-injection.html">마늘주사</a></li>
+          <li><a href="mega-vitaminc.html">메가 비타민C주사</a></li>
+          <li><a href="antioxidant.html">항산화주사</a></li>
+          <li><a href="nutrition-injection.html">고영양주사</a></li>
+          <li><a href="brain-injection.html">브레인주사</a></li>
+          <li><a href="cinderella-injection.html">신데렐라주사</a></li>
+          <li><a href="princess-injection.html">백성공주주사</a></li>
+          <li><a href="vitamind.html">비타민D주사</a></li>
+          <li><a href="multi-vitamin.html">멀티 비타민주사</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">성인예방접종</a>
+        <ul class="dropdown">
+          <li><a href="pneumococcal.html">폐렴구균</a></li>
+          <li><a href="hpv.html">자궁경부암</a></li>
+          <li><a href="shingles.html">대상포진</a></li>
+          <li><a href="rubella-varicella.html">풍진 / 수두</a></li>
+          <li><a href="tetanus.html">파상풍</a></li>
+          <li><a href="hepatitis.html">간염예방접종</a></li>
+        </ul>
+      </li>
+      <li><a href="smoking-cessation.html">금연클리닉</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       HERO SLIDER
+       ═══════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+
+    <!-- Slide 1 — Body Clinic -->
+    <div class="slide active">
+      <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1920&q=80');"></div>
+      <div class="slide-content">
+        <div class="slide-text">
+          <div class="slide-eyebrow">Body Clinic</div>
+          <h2 class="slide-headline">
+            날씬하고 탄력있는<br>
+            <em>아름다운 바디라인</em>
+          </h2>
+          <p class="slide-sub">
+            운동 없이도 빠르게 라인과 탄력을 동시에.<br>
+            오썸의원의 1:1 맞춤 체형 프로그램으로 가장 자연스러운 변화를 만나보세요.
+          </p>
+          <a href="#clinics" class="slide-cta">
+            진료 살펴보기
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 — Skin Clinic -->
+    <div class="slide">
+      <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1920&q=80');"></div>
+      <div class="slide-content">
+        <div class="slide-text">
+          <div class="slide-eyebrow">Skin Clinic</div>
+          <h2 class="slide-headline">
+            피부가 살아나는 힘<br>
+            <em>건강한 피부 자신감</em>
+          </h2>
+          <p class="slide-sub">
+            피부 속부터 건강해지는 맞춤 스킨케어.<br>
+            의료진이 직접 분석하는 정밀 진단으로 가장 빛나는 피부를 완성합니다.
+          </p>
+          <a href="#clinics" class="slide-cta">
+            진료 살펴보기
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 — Anti-aging -->
+    <div class="slide">
+      <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1920&q=80');"></div>
+      <div class="slide-content">
+        <div class="slide-text">
+          <div class="slide-eyebrow">Anti-Aging</div>
+          <h2 class="slide-headline">
+            세포부터 깨어나는<br>
+            <em>젊음의 비밀</em>
+          </h2>
+          <p class="slide-sub">
+            고품질 영양 주사와 맞춤 항노화 프로그램으로<br>
+            안에서부터 빛나는 컨디션과 활력을 되찾으세요.
+          </p>
+          <a href="#clinics" class="slide-cta">
+            진료 살펴보기
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint">SCROLL DOWN</div>
+
+    <!-- Slider nav (counter + progress) -->
+    <div class="slider-nav">
+      <div class="slider-counter"><span class="current">01</span> &nbsp;/&nbsp; 03</div>
+      <div class="slider-progress"><div class="slider-progress-bar" id="progressBar"></div></div>
+    </div>
+
+    <!-- Slider arrows -->
+    <div class="slider-arrows">
+      <button onclick="changeSlide(-1)" aria-label="이전">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button onclick="changeSlide(1)" aria-label="다음">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       PHILOSOPHY · 인사말
+       ═══════════════════════════════════════════════ -->
+  <section class="philosophy">
+    <div class="container">
+      <div class="philosophy-grid">
+        <div class="philosophy-image">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80" alt="오썸의원 진료 모습">
+        </div>
+        <div class="philosophy-text">
+          <div class="sec-eyebrow left">Our Philosophy</div>
+          <h2 class="sec-title">
+            어제보다 더 나은 오늘을,<br>
+            정성 어린 <em>1:1 맞춤 진료</em>로
+          </h2>
+          <p class="sec-desc">
+            오썸의원은 방문하시는 모든 분들을 위해 최선을 다합니다.
+            형식적인 시술이 아닌, 한 분 한 분의 상태와 라이프스타일에
+            맞춰 가장 자연스럽고 효과적인 치료를 제안합니다.
+            오늘보다 더 건강하고 아름다운 내일을 약속드립니다.
+          </p>
+          <div class="philosophy-features">
+            <div class="philosophy-feature">
+              <div class="philosophy-feature-num">01</div>
+              <div>
+                <div class="philosophy-feature-title">정밀 진단</div>
+                <div class="philosophy-feature-text">상세한 상담과 정확한 진단으로 시작하는 맞춤 진료</div>
+              </div>
+            </div>
+            <div class="philosophy-feature">
+              <div class="philosophy-feature-num">02</div>
+              <div>
+                <div class="philosophy-feature-title">전문 의료진</div>
+                <div class="philosophy-feature-text">풍부한 임상 경험을 갖춘 전문 의료진의 직접 시술</div>
+              </div>
+            </div>
+            <div class="philosophy-feature">
+              <div class="philosophy-feature-num">03</div>
+              <div>
+                <div class="philosophy-feature-title">맞춤 프로그램</div>
+                <div class="philosophy-feature-text">개인의 목표와 상태에 따른 1:1 맞춤형 치료 설계</div>
+              </div>
+            </div>
+            <div class="philosophy-feature">
+              <div class="philosophy-feature-num">04</div>
+              <div>
+                <div class="philosophy-feature-title">지속 케어</div>
+                <div class="philosophy-feature-text">치료 이후에도 꾸준한 관리로 변화를 함께 지킵니다</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       SPECIAL CLINICS
+       ═══════════════════════════════════════════════ -->
+  <section class="clinics" id="clinics">
+    <div class="container">
+      <div class="sec-header">
+        <div class="sec-eyebrow">Special Clinic</div>
+        <h2 class="sec-title">오썸의원 <em>대표 진료</em></h2>
+        <p class="sec-desc">
+          비만/체형, 피부, 항노화까지 — 가장 자연스러운 변화를 위한
+          오썸의원만의 시그니처 클리닉을 만나보세요.
+        </p>
+      </div>
+
+      <div class="clinics-grid">
+
+        <a href="#" class="clinic-card">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80" alt="비만 / 체형 클리닉">
+          <div class="clinic-card-body">
+            <span class="clinic-card-num">— 01</span>
+            <div class="clinic-card-en">Body Clinic</div>
+            <h3 class="clinic-card-title">비만 / 체형</h3>
+            <p class="clinic-card-desc">1:1 맞춤 관리로 라인과 탄력을 동시에. 건강하게 변화하는 내 모습을 만나보세요.</p>
+            <div class="clinic-card-arrow">자세히 보기</div>
+          </div>
+        </a>
+
+        <a href="#" class="clinic-card">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80" alt="피부 클리닉">
+          <div class="clinic-card-body">
+            <span class="clinic-card-num">— 02</span>
+            <div class="clinic-card-en">Skin Clinic</div>
+            <h3 class="clinic-card-title">피부 관리</h3>
+            <p class="clinic-card-desc">정밀 진단 기반의 맞춤 스킨케어로 빛나는 피부를 완성합니다.</p>
+            <div class="clinic-card-arrow">자세히 보기</div>
+          </div>
+        </a>
+
+        <a href="#" class="clinic-card">
+          <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=900&q=80" alt="항노화 클리닉">
+          <div class="clinic-card-body">
+            <span class="clinic-card-num">— 03</span>
+            <div class="clinic-card-en">Anti-Aging</div>
+            <h3 class="clinic-card-title">항노화 / 비타민</h3>
+            <p class="clinic-card-desc">피부와 몸이 함께 젊어지는 프리미엄 영양 주사 프로그램.</p>
+            <div class="clinic-card-arrow">자세히 보기</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       QUOTE BAND
+       ═══════════════════════════════════════════════ -->
+  <section class="quote-band">
+    <div class="quote-band-inner">
+      <div class="quote-eyebrow">Consultation</div>
+      <p class="quote-text">
+        상세한 <strong>상담과 진료</strong>를 통해<br>
+        개인별 <strong>1:1 맞춤 치료</strong>를 진행합니다.
+      </p>
+      <div class="quote-divider"></div>
+      <div class="quote-author">— Awesome Clinic Promise</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FEATURED · BODY CLINIC
+       ═══════════════════════════════════════════════ -->
+  <section class="featured">
+    <div class="container">
+      <div class="sec-header">
+        <div class="sec-eyebrow">Body Clinic Signature</div>
+        <h2 class="sec-title">탄력 있고 건강한 <em>몸매라인</em></h2>
+        <p class="sec-desc">
+          오썸의원의 시그니처 비만/체형 프로그램으로<br>
+          가장 자연스럽게 원하는 라인을 완성하세요.
+        </p>
+      </div>
+
+      <div class="featured-grid">
+
+        <a href="obesity-drug.html" class="feat-card">
+          <div class="feat-thumb">
+            <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=900&q=80" alt="비만약">
+            <div class="feat-tag">Body</div>
+          </div>
+          <div class="feat-body">
+            <div class="feat-num">— Treatment 01</div>
+            <h3 class="feat-title">비만약</h3>
+            <div class="feat-en">Obesity Treatment</div>
+            <p class="feat-desc">
+              개인별 처방으로 집중 관리하고 꾸준히 유지합니다.
+              가장 건강한 다이어트의 시작.
+            </p>
+            <span class="feat-link">Read More →</span>
+          </div>
+        </a>
+
+        <a href="carboxy.html" class="feat-card">
+          <div class="feat-thumb">
+            <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/5b29d8239d93a.png" alt="카복시">
+            <div class="feat-tag">Body</div>
+          </div>
+          <div class="feat-body">
+            <div class="feat-num">— Treatment 02</div>
+            <h3 class="feat-title">카복시 테라피</h3>
+            <div class="feat-en">Carboxy Therapy</div>
+            <p class="feat-desc">
+              CO₂로 지방세포를 분해하고 라인과 탄력을 동시에.
+              매끈한 바디라인을 위한 시그니처 시술.
+            </p>
+            <span class="feat-link">Read More →</span>
+          </div>
+        </a>
+
+        <a href="hpl.html" class="feat-card">
+          <div class="feat-thumb">
+            <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/8f1113dd496c1.jpeg" alt="HPL 주사">
+            <div class="feat-tag">Body</div>
+          </div>
+          <div class="feat-body">
+            <div class="feat-num">— Treatment 03</div>
+            <h3 class="feat-title">나봄 HPL 주사</h3>
+            <div class="feat-en">HPL Injection</div>
+            <p class="feat-desc">
+              초강력 지방용해술로 체계적이고 효율적인 부분 다이어트.
+              원하는 부위에 정확하게.
+            </p>
+            <span class="feat-link">Read More →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       WHY US
+       ═══════════════════════════════════════════════ -->
+  <section class="why">
+    <div class="container">
+      <div class="why-header">
+        <div>
+          <div class="sec-eyebrow left">Why Awesome</div>
+          <h2 class="sec-title">
+            오썸의원을<br>
+            <em>선택해야 하는 이유</em>
+          </h2>
+        </div>
+        <p class="sec-desc">
+          오썸의원은 단순한 시술이 아닌,
+          한 분 한 분의 일상을 바꾸는 진료를 약속합니다.
+          365일, 언제나 최선을 다하는 의료진이 함께합니다.
+        </p>
+      </div>
+
+      <div class="why-grid">
+
+        <div class="why-card">
+          <div class="why-thumb">
+            <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/1d5cab64e3ed3.jpeg" alt="1:1 맞춤 진료">
+          </div>
+          <div class="why-body">
+            <div class="why-num">— 01</div>
+            <h4 class="why-title">1:1 맞춤 진료</h4>
+            <p class="why-text">개인별 상태와 목표에 맞춘 정밀한 진단과 시술 설계</p>
+          </div>
+        </div>
+
+        <div class="why-card">
+          <div class="why-thumb">
+            <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/b9a22d23c21ae.jpeg" alt="전문 의료진">
+          </div>
+          <div class="why-body">
+            <div class="why-num">— 02</div>
+            <h4 class="why-title">전문 의료진</h4>
+            <p class="why-text">풍부한 임상 경험을 갖춘 의료진의 직접 진료와 시술</p>
+          </div>
+        </div>
+
+        <div class="why-card">
+          <div class="why-thumb">
+            <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/5dce4059e5873.jpeg" alt="프리미엄 장비">
+          </div>
+          <div class="why-body">
+            <div class="why-num">— 03</div>
+            <h4 class="why-title">프리미엄 장비</h4>
+            <p class="why-text">검증된 최신 의료 장비로 안전하고 효과적인 시술</p>
+          </div>
+        </div>
+
+        <div class="why-card">
+          <div class="why-thumb">
+            <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/e189c9a23e657.jpeg" alt="지속 케어">
+          </div>
+          <div class="why-body">
+            <div class="why-num">— 04</div>
+            <h4 class="why-title">지속적 케어</h4>
+            <p class="why-text">치료 후에도 변화를 함께 지키는 체계적인 사후 관리</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       INFO · 진료시간 & 오시는길
+       ═══════════════════════════════════════════════ -->
+  <section class="info" id="info">
+    <div class="container">
+      <div class="sec-header">
+        <div class="sec-eyebrow">Visit Us</div>
+        <h2 class="sec-title">진료시간 & <em>오시는 길</em></h2>
+        <p class="sec-desc">언제든 편하게 방문해 주세요. 친절한 상담으로 맞이하겠습니다.</p>
+      </div>
+
+      <div class="info-grid">
+
+        <div class="hours-card">
+          <div class="hours-eyebrow">Clinic Hours</div>
+          <h3 class="hours-title">진료시간 안내</h3>
+          <div class="hours-divider"></div>
+
+          <div class="hours-list">
+            <div class="hours-item">
+              <span class="hours-day">월 · 화 · 금</span>
+              <div class="hours-time-wrap">
+                <span class="hours-time">09:30 — 18:30</span>
+                <span class="hours-break">점심 13:00 — 14:00</span>
+              </div>
+            </div>
+            <div class="hours-item">
+              <span class="hours-day">수요일</span>
+              <div class="hours-time-wrap">
+                <span class="hours-time">09:30 — 20:30</span>
+                <span class="hours-break">점심 13:00 — 14:00</span>
+              </div>
+            </div>
+            <div class="hours-item">
+              <span class="hours-day">토요일</span>
+              <div class="hours-time-wrap">
+                <span class="hours-time">09:30 — 15:00</span>
+              </div>
+            </div>
+            <div class="hours-item">
+              <span class="hours-day">목 · 일요일</span>
+              <div class="hours-time-wrap">
+                <span class="hours-time closed">정기휴무</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hours-contact">
+            <div class="hours-phone">031.901.9909</div>
+            <div class="hours-phone-sub">SUB · 031.901.1024 &nbsp;·&nbsp; 점심시간 13:00 — 14:00</div>
+            <div class="hours-buttons">
+              <a href="tel:0319019909" class="hours-btn hours-btn-1">전화 상담</a>
+              <a href="http://pf.kakao.com/_wPhDxl" target="_blank" class="hours-btn hours-btn-2">카카오 상담</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-card">
+          <div class="map-card-header">
+            <div class="map-card-eyebrow">Location</div>
+            <h3 class="map-card-title">오썸의원 오시는 길</h3>
+            <p class="map-card-addr">경기 고양시 일산동구 정발산로 23, 3층 301호</p>
+          </div>
+          <div class="map-frame">
+            <div id="daumRoughmapContainer1775715156945" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/8063c728fb8a8.png" alt="오썸의원">
+          <div class="footer-tagline">— Awesome Clinic</div>
+          <p class="footer-desc">
+            오썸의원은 비만/체형, 피부, 항노화, 예방접종, 금연 클리닉을
+            운영하는 종합 메디컬 클리닉입니다. 1:1 맞춤 진료로
+            가장 자연스러운 변화를 약속합니다.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-title">Clinic</div>
+          <ul>
+            <li><a href="#">비만 / 체형 클리닉</a></li>
+            <li><a href="#">피부 클리닉</a></li>
+            <li><a href="#">항노화 / 비타민</a></li>
+            <li><a href="#">성인 예방접종</a></li>
+            <li><a href="smoking-cessation.html">금연 클리닉</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-title">About</div>
+          <ul>
+            <li><a href="greeting.html">인사말</a></li>
+            <li><a href="#info">진료 안내</a></li>
+            <li><a href="#info">오시는 길</a></li>
+            <li><a href="#">클리닉 둘러보기</a></li>
+            <li><a href="http://pf.kakao.com/_wPhDxl" target="_blank">카카오 상담</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-title">Contact</div>
+          <p class="footer-info-line"><strong>TEL.</strong> 031.901.9909</p>
+          <p class="footer-info-line"><strong>SUB.</strong> 031.901.1024</p>
+          <p class="footer-info-line">경기 고양시 일산동구<br>정발산로 23, 3층 301호</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">© 2024 Ossom Clinic · All Rights Reserved</div>
+        <div>Premium Medical · Skin · Body · Vitality</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════
+       FLOATING ACTIONS
+       ═══════════════════════════════════════════════ -->
+  <div class="float-actions">
+    <a href="http://pf.kakao.com/_wPhDxl" target="_blank" class="float-btn kakao" aria-label="카카오 상담">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.58 2 10.94c0 2.8 1.86 5.27 4.66 6.67-.15.56-.96 3.58-1 3.73 0 .07.03.14.09.18.04.03.1.04.18-.01.25-.17 3.7-2.45 4.23-2.8.6.09 1.22.13 1.84.13 5.52 0 10-3.58 10-7.9S17.52 3 12 3z"/></svg>
+    </a>
+    <a href="tel:0319019909" class="float-btn" aria-label="전화 상담">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+    <button class="float-btn top" id="toTop" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="맨 위로">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       SLIDER + UI SCRIPT
+       ═══════════════════════════════════════════════ -->
+  <script>
+    // Slider
+    const slides = document.querySelectorAll('.slide');
+    const counter = document.querySelector('.slider-counter .current');
+    const progressBar = document.getElementById('progressBar');
+    const SLIDE_DURATION = 6000;
+    let cur = 0, timer, progressTimer, progress = 0;
+
+    function show(idx) {
+      slides[cur].classList.remove('active');
+      cur = (idx + slides.length) % slides.length;
+      slides[cur].classList.add('active');
+      counter.textContent = String(cur + 1).padStart(2, '0');
+      restartProgress();
+    }
+    function changeSlide(d) { show(cur + d); }
+    function restartProgress() {
+      clearInterval(progressTimer);
+      progress = 0;
+      progressBar.style.width = '0%';
+      progressTimer = setInterval(() => {
+        progress += 100 / (SLIDE_DURATION / 50);
+        progressBar.style.width = Math.min(progress, 100) + '%';
+        if (progress >= 100) {
+          show(cur + 1);
+        }
+      }, 50);
+    }
+    restartProgress();
+
+    // Sticky nav shadow
+    const navWrap = document.getElementById('navWrapper');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) navWrap.classList.add('scrolled');
+      else navWrap.classList.remove('scrolled');
+
+      const toTop = document.getElementById('toTop');
+      if (window.scrollY > 600) toTop.classList.add('show');
+      else toTop.classList.remove('show');
+    });
+  </script>
+
+  <!-- ═══════════════════════════════════════════════
+       KAKAO MAP
+       ═══════════════════════════════════════════════ -->
+  <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+  <script charset="UTF-8">
+    new daum.roughmap.Lander({
+      "timestamp" : "1775715156945",
+      "key"       : "kehp63e29x4",
+      "mapWidth"  : "640",
+      "mapHeight" : "420"
+    }).render();
+  </script>
+
+</body>
+</html>

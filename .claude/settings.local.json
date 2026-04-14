@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc:*)",
+      "Bash(py --version)",
+      "Bash(python -m http.server 8765)",
+      "Bash(curl:*)",
+      "Bash(mkdir css:*)",
+      "Bash(python generate_pages.py)",
+      "Bash(npx --version)",
+      "Bash(python -m http.server 3003)",
+      "Bash(sed -i 's|https://images\\\\.unsplash\\\\.com/photo-1559757175-5700dde675bc?auto=format\\\\&fit=crop\\\\&w=600\\\\&q=80|https://cdn.imweb.me/upload/S20260108b9005a7eb2710/1d5cab64e3ed3.jpeg|g' *.html)",
+      "Bash(sed -i 's|https://images\\\\.unsplash\\\\.com/photo-1576091160550-2173dba999ef?auto=format\\\\&fit=crop\\\\&w=600\\\\&q=80|https://cdn.imweb.me/upload/S20260108b9005a7eb2710/b9a22d23c21ae.jpeg|g' *.html)",
+      "Bash(sed -i 's|https://images\\\\.unsplash\\\\.com/photo-1631815589968-fdb09a223b1e?auto=format\\\\&fit=crop\\\\&w=600\\\\&q=80|https://cdn.imweb.me/upload/S20260108b9005a7eb2710/5dce4059e5873.jpeg|g' *.html)",
+      "Bash(sed -i 's|https://images\\\\.unsplash\\\\.com/photo-1612531386530-97286d97c2d2?auto=format\\\\&fit=crop\\\\&w=600\\\\&q=80|https://cdn.imweb.me/upload/S20260108b9005a7eb2710/e189c9a23e657.jpeg|g' *.html)",
+      "Bash(grep -l \"비만\\\\|체형\\\\|다이어트\\\\|Body\\\\|body\" \"C:\\\\Users\\\\qkdgh\\\\OneDrive\\\\바탕 화면\\\\AI\\\\오썸의원\"/*.html)",
+      "Bash(xargs -I{} basename {})",
+      "Bash(grep -l \"비만/체형\\\\|비만클리닉\\\\|체형클리닉\" \"C:\\\\Users\\\\qkdgh\\\\OneDrive\\\\바탕 화면\\\\AI\\\\오썸의원\"/*.html)",
+      "Bash(sed -i 's|<a href=\"#\">인사말</a>|<a href=\"greeting.html\">인사말</a>|g' *.html)",
+      "Bash(grep -rn 'href=\"greeting.html\"' *.html)",
+      "Bash(grep -rn \"성남\\\\|정자일로\\\\|분당\\\\|아이퀘스트\" \"C:\\\\Users\\\\qkdgh\\\\OneDrive\\\\바탕 화면\\\\AI\\\\오썸의원\"/*.html)",
+      "Bash(sed -i 's|경기도 성남시 분당구 정자일로 134|경기 고양시 일산동구 정발산로 23 3층 301호|g' *.html)",
+      "Bash(sed -i 's|경기도 성남시 분당구<br>정자일로 134, 아이퀘스트 1F|경기 고양시 일산동구<br>정발산로 23, 3층 301호|g' *.html)",
+      "Bash(grep -rl \"성남\\\\|정자일로\\\\|분당\\\\|아이퀘스트\" *.html)",
+      "Bash(gh auth:*)",
+      "Bash(git --version)",
+      "Bash(git config:*)"
+    ]
+  }
+}
