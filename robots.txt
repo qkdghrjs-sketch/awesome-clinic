@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# 네이버 봇
+User-agent: Yeti
+Allow: /
+
+# 구글 봇
+User-agent: Googlebot
+Allow: /
+
+# 다음/카카오 봇
+User-agent: Daum
+Allow: /
+
+Sitemap: https://awesome-clinic.vercel.app/sitemap.xml
