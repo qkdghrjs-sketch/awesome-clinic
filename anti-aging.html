@@ -29,14 +29,14 @@
   <style>
     /* ── 항노화 통합 페이지 ── */
     .inject-section {
-      padding: 100px 0 120px;
+      padding: 110px 0 130px;
       background: var(--paper, #faf9f7);
     }
     .inject-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      margin-top: 60px;
+      gap: 40px 32px;
+      margin-top: 70px;
     }
     .inject-card {
       background: #fff;
@@ -48,59 +48,49 @@
       transition: box-shadow 0.3s ease, transform 0.3s ease;
     }
     .inject-card:hover {
-      box-shadow: 0 12px 40px rgba(0,0,0,0.10);
-      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.09);
+      transform: translateY(-5px);
     }
     .inject-card-num {
       font-family: 'Playfair Display', serif;
       font-size: 11px; font-style: italic; letter-spacing: 3px;
       color: #b59a5a;
-      padding: 28px 28px 0;
+      padding: 36px 32px 0;
     }
     .inject-card-body {
-      padding: 16px 28px 32px;
+      padding: 18px 32px 40px;
       flex: 1;
       display: flex;
       flex-direction: column;
     }
     .inject-card-en {
       font-size: 11px; letter-spacing: 3px;
-      color: #999; text-transform: uppercase;
+      color: #bbb; text-transform: uppercase;
       margin-bottom: 10px;
     }
     .inject-card-title {
       font-family: 'Noto Serif KR', serif;
-      font-size: 20px; font-weight: 700;
+      font-size: 21px; font-weight: 700;
       color: #1a2e20;
-      margin-bottom: 14px;
+      margin-bottom: 18px;
       line-height: 1.4;
     }
     .inject-card-desc {
-      font-size: 13px; color: #555;
-      line-height: 1.85; font-weight: 300;
-      flex: 1;
-      margin-bottom: 24px;
+      font-size: 13.5px; color: #606060;
+      line-height: 2.0; font-weight: 300;
     }
-    .inject-card-link {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 12px; font-weight: 600; letter-spacing: 2px;
-      color: #1a2e20; text-decoration: none;
-      text-transform: uppercase;
-      border-bottom: 1px solid #b59a5a;
-      padding-bottom: 4px;
-      transition: color 0.2s, border-color 0.2s;
-    }
-    .inject-card-link:hover { color: #b59a5a; }
     .inject-card-divider {
       height: 3px;
       background: linear-gradient(to right, #b59a5a, #e8d5a0, #b59a5a);
     }
-    @media (max-width: 900px) {
-      .inject-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    @media (max-width: 1024px) {
+      .inject-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
     }
-    @media (max-width: 480px) {
-      .inject-grid { grid-template-columns: 1fr; gap: 14px; }
-      .inject-section { padding: 60px 0 80px; }
+    @media (max-width: 600px) {
+      .inject-grid { grid-template-columns: 1fr; gap: 20px; }
+      .inject-section { padding: 70px 0 90px; }
+      .inject-card-num { padding: 28px 24px 0; }
+      .inject-card-body { padding: 14px 24px 32px; }
     }
   </style>
 </head>
@@ -268,8 +258,7 @@
           <div class="inject-card-body">
             <div class="inject-card-en">Garlic Injection</div>
             <h3 class="inject-card-title">마늘주사</h3>
-            <p class="inject-card-desc">고용량 비타민 B1 성분으로 피로를 해소하고 활력과 에너지를 채워주는 오썸의원의 클래식한 영양 주사입니다. 만성 피로나 체력 저하를 느끼는 분께 가장 추천드리는 시그니처 주사입니다.</p>
-            <a href="garlic-injection.html" class="inject-card-link">자세히 보기 →</a>
+            <p class="inject-card-desc">고용량 비타민 B1으로 피로를 해소하고 활력을 채워드리는 클래식 영양 주사. 만성 피로와 체력 저하를 느끼는 분께 가장 먼저 추천드립니다.</p>
           </div>
         </div>
 
@@ -279,8 +268,7 @@
           <div class="inject-card-body">
             <div class="inject-card-en">Mega Vitamin C</div>
             <h3 class="inject-card-title">메가 비타민C 주사</h3>
-            <p class="inject-card-desc">고함량 비타민 C를 직접 주입하여 강력한 항산화 효과와 피부 미백, 면역력 강화를 동시에 경험하실 수 있습니다. 경구 섭취보다 훨씬 빠르고 효과적으로 비타민 C를 전달합니다.</p>
-            <a href="mega-vitaminc.html" class="inject-card-link">자세히 보기 →</a>
+            <p class="inject-card-desc">고함량 비타민 C를 직접 주입해 강력한 항산화 효과와 피부 미백, 면역력 강화를 한 번에. 경구 섭취보다 훨씬 빠른 흡수로 효과를 경험하세요.</p>
           </div>
         </div>
 
@@ -290,8 +278,7 @@
           <div class="inject-card-body">
             <div class="inject-card-en">Antioxidant Injection</div>
             <h3 class="inject-card-title">항산화 주사</h3>
-            <p class="inject-card-desc">다양한 항산화 성분으로 활성산소를 제거하고 노화를 늦춰주는 안티에이징 영양 주사입니다. 세포 손상을 방지하고 안에서부터 젊음을 지켜드리는 시그니처 케어입니다.</p>
-            <a href="antioxidant.html" class="inject-card-link">자세히 보기 →</a>
+            <p class="inject-card-desc">다양한 항산화 성분으로 활성산소를 제거하고 세포 노화를 늦춰드립니다. 안에서부터 젊음을 지키는 오썸의원의 시그니처 안티에이징 케어입니다.</p>
           </div>
         </div>
 
@@ -301,8 +288,7 @@
           <div class="inject-card-body">
             <div class="inject-card-en">Nutrition Injection</div>
             <h3 class="inject-card-title">고영양 주사</h3>
-            <p class="inject-card-desc">필수 비타민과 미네랄, 아미노산을 한 번에 공급하는 종합 영양 주사로 가장 빠르게 컨디션을 회복합니다. 바쁜 일상 속 균형 잡힌 영양 섭취가 어려운 분께 추천드립니다.</p>
-            <a href="nutrition-injection.html" class="inject-card-link">자세히 보기 →</a>
+            <p class="inject-card-desc">필수 비타민·미네랄·아미노산을 한 번에 공급하는 종합 영양 주사. 바쁜 일상 속 부족해진 영양을 빠르게 채워 컨디션을 회복시켜 드립니다.</p>
           </div>
         </div>
 
@@ -312,8 +298,7 @@
           <div class="inject-card-body">
             <div class="inject-card-en">Brain Injection</div>
             <h3 class="inject-card-title">브레인 주사</h3>
-            <p class="inject-card-desc">뇌 기능과 기억력 향상, 집중력 개선에 도움을 주는 신경 영양 성분으로 구성된 주사입니다. 집중력 저하, 기억력 감퇴, 만성 피로로 고민이신 분들께 도움이 됩니다.</p>
-            <a href="brain-injection.html" class="inject-card-link">자세히 보기 →</a>
+            <p class="inject-card-desc">뇌 기능과 기억력 향상, 집중력 개선에 특화된 신경 영양 주사. 집중력 저하나 기억력 감퇴를 느끼는 분들께 도움이 됩니다.</p>
           </div>
         </div>
 
@@ -323,8 +308,7 @@
           <div class="inject-card-body">
             <div class="inject-card-en">Cinderella Injection</div>
             <h3 class="inject-card-title">신데렐라 주사</h3>
-            <p class="inject-card-desc">강력한 항산화 성분으로 피부톤을 밝게 하고 안에서부터 맑고 투명한 피부를 만들어주는 가장 사랑받는 인기 영양 주사입니다. 칙칙한 피부톤 개선에 탁월합니다.</p>
-            <a href="cinderella-injection.html" class="inject-card-link">자세히 보기 →</a>
+            <p class="inject-card-desc">강력한 항산화 성분으로 피부톤을 밝히고 안에서부터 맑고 투명한 피부를 만들어드립니다. 칙칙한 피부톤 개선에 가장 사랑받는 인기 주사입니다.</p>
           </div>
         </div>
 
@@ -334,8 +318,7 @@
           <div class="inject-card-body">
             <div class="inject-card-en">Princess Injection</div>
             <h3 class="inject-card-title">백성공주 주사</h3>
-            <p class="inject-card-desc">엄선된 미백 성분과 항산화 영양소로 더욱 화사하고 맑은 피부톤을 완성해 주는 프리미엄 주사입니다. 신데렐라주사보다 한 단계 강화된 처방으로 더욱 빠른 변화를 경험하실 수 있습니다.</p>
-            <a href="princess-injection.html" class="inject-card-link">자세히 보기 →</a>
+            <p class="inject-card-desc">미백 성분과 항산화 영양소로 화사하고 맑은 피부톤을 완성하는 프리미엄 주사. 신데렐라주사보다 한 단계 강화된 처방으로 더 빠른 변화를 경험하세요.</p>
           </div>
         </div>
 
@@ -345,8 +328,7 @@
           <div class="inject-card-body">
             <div class="inject-card-en">Vitamin D Injection</div>
             <h3 class="inject-card-title">비타민D 주사</h3>
-            <p class="inject-card-desc">현대인에게 부족한 비타민 D를 고함량으로 보충하여 면역력과 뼈 건강을 동시에 지켜드리는 주사입니다. 실내 생활이 많아 햇빛 노출이 부족한 분께 특히 추천드립니다.</p>
-            <a href="vitamind.html" class="inject-card-link">자세히 보기 →</a>
+            <p class="inject-card-desc">현대인에게 부족한 비타민 D를 고함량으로 보충해 면역력과 뼈 건강을 동시에 지켜드립니다. 실내 생활이 많아 햇빛 노출이 부족한 분께 추천드립니다.</p>
           </div>
         </div>
 
@@ -356,8 +338,7 @@
           <div class="inject-card-body">
             <div class="inject-card-en">Multi Vitamin</div>
             <h3 class="inject-card-title">멀티 비타민 주사</h3>
-            <p class="inject-card-desc">다양한 비타민과 미네랄을 균형 있게 공급하여 종합적인 컨디션 관리에 도움을 드리는 균형 잡힌 영양 주사입니다. 전체적인 건강 관리와 컨디션 유지에 도움이 됩니다.</p>
-            <a href="multi-vitamin.html" class="inject-card-link">자세히 보기 →</a>
+            <p class="inject-card-desc">다양한 비타민과 미네랄을 균형 있게 공급하는 종합 영양 주사. 전체적인 건강 관리와 안정적인 컨디션 유지에 도움이 됩니다.</p>
           </div>
         </div>
 
