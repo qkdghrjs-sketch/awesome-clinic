@@ -1,31 +1,108 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>엔더몰로지 · 오썸의원</title>
-  <meta name="description" content="엔더몰로지 - 특허받은 롤링 기술로 피부와 지방층을 깊숙이 마사지하여 셀룰라이트를 효과적으로 케어하고 매끈한 피부 결을 만들어드립니다.">
+  <title>항노화 / 비타민 주사 · 오썸의원</title>
+  <meta name="description" content="항노화/비타민 주사 - 마늘주사, 메가 비타민C, 항산화, 고영양, 브레인, 신데렐라, 백성공주, 비타민D, 멀티비타민. 오썸의원의 프리미엄 영양 주사 프로그램.">
   <!-- ── SEO ── -->
   <meta name="robots" content="index, follow">
   <meta name="author" content="오썸의원">
-  <link rel="canonical" href="https://awesome-clinic.vercel.app/endermologie.html">
+  <link rel="canonical" href="https://awesome-clinic.vercel.app/anti-aging.html">
   <!-- ── Open Graph / 카카오 ── -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ko_KR">
   <meta property="og:site_name" content="오썸의원">
-  <meta property="og:title" content="엔더몰로지 · 오썸의원">
-  <meta property="og:description" content="엔더몰로지 - 특허받은 롤링 기술로 피부와 지방층을 깊숙이 마사지하여 셀룰라이트를 효과적으로 케어하고 매끈한 피부 결을 만들어드립니다.">
-  <meta property="og:url" content="https://awesome-clinic.vercel.app/endermologie.html">
+  <meta property="og:title" content="항노화 / 비타민 주사 · 오썸의원">
+  <meta property="og:description" content="마늘주사부터 신데렐라주사까지 — 오썸의원의 프리미엄 영양 주사 전체 라인업을 만나보세요.">
+  <meta property="og:url" content="https://awesome-clinic.vercel.app/anti-aging.html">
   <meta property="og:image" content="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/8063c728fb8a8.png">
   <!-- ── 트위터 카드 ── -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="엔더몰로지 · 오썸의원">
-  <meta name="twitter:description" content="엔더몰로지 - 특허받은 롤링 기술로 피부와 지방층을 깊숙이 마사지하여 셀룰라이트를 효과적으로 케어하고 매끈한 피부 결을 만들어드립니다.">
+  <meta name="twitter:title" content="항노화 / 비타민 주사 · 오썸의원">
+  <meta name="twitter:description" content="마늘주사부터 신데렐라주사까지 — 오썸의원의 프리미엄 영양 주사 전체 라인업을 만나보세요.">
   <meta name="twitter:image" content="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/8063c728fb8a8.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=Noto+Serif+KR:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/clinic-style.css">
+  <style>
+    /* ── 항노화 통합 페이지 ── */
+    .inject-section {
+      padding: 100px 0 120px;
+      background: var(--paper, #faf9f7);
+    }
+    .inject-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 60px;
+    }
+    .inject-card {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.07);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .inject-card:hover {
+      box-shadow: 0 12px 40px rgba(0,0,0,0.10);
+      transform: translateY(-4px);
+    }
+    .inject-card-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 11px; font-style: italic; letter-spacing: 3px;
+      color: #b59a5a;
+      padding: 28px 28px 0;
+    }
+    .inject-card-body {
+      padding: 16px 28px 32px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .inject-card-en {
+      font-size: 11px; letter-spacing: 3px;
+      color: #999; text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .inject-card-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 20px; font-weight: 700;
+      color: #1a2e20;
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+    .inject-card-desc {
+      font-size: 13px; color: #555;
+      line-height: 1.85; font-weight: 300;
+      flex: 1;
+      margin-bottom: 24px;
+    }
+    .inject-card-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 600; letter-spacing: 2px;
+      color: #1a2e20; text-decoration: none;
+      text-transform: uppercase;
+      border-bottom: 1px solid #b59a5a;
+      padding-bottom: 4px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .inject-card-link:hover { color: #b59a5a; }
+    .inject-card-divider {
+      height: 3px;
+      background: linear-gradient(to right, #b59a5a, #e8d5a0, #b59a5a);
+    }
+    @media (max-width: 900px) {
+      .inject-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    }
+    @media (max-width: 480px) {
+      .inject-grid { grid-template-columns: 1fr; gap: 14px; }
+      .inject-section { padding: 60px 0 80px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -47,7 +124,7 @@
   <!-- ═══ HEADER ═══ -->
   <header class="header">
     <div class="header-inner">
-      <div class="header-left">Body Clinic</div>
+      <div class="header-left">Anti-Aging &amp; Vitamin Clinic</div>
       <div class="header-center">
         <a href="index.html"><img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/8063c728fb8a8.png" alt="오썸의원"></a>
       </div>
@@ -66,15 +143,15 @@
   <!-- ═══ NAVIGATION ═══ -->
   <div class="nav-wrapper" id="navWrapper">
     <ul class="nav">
-      <li><a href="#">오썸클리닉 소개</a></li>
-      <li class="active">
+      <li><a href="greeting.html">오썸클리닉 소개</a></li>
+      <li>
         <a href="#">비만 / 체형클리닉</a>
         <ul class="dropdown">
           <li><a href="obesity-drug.html">비만약</a></li>
           <li><a href="carboxy.html">카복시</a></li>
           <li><a href="medium-frequency.html">중저주파</a></li>
           <li><a href="high-frequency.html">고주파</a></li>
-          <li><a href="endermologie.html" class="current">엔더몰로지</a></li>
+          <li><a href="endermologie.html">엔더몰로지</a></li>
           <li><a href="line-meso.html">라인메조주사</a></li>
           <li><a href="hpl.html">나봄 HPL 주사</a></li>
           <li><a href="micool.html">미쿨</a></li>
@@ -96,8 +173,8 @@
           <li><a href="shemax.html">쉬맥스</a></li>
         </ul>
       </li>
-      <li>
-        <a href="anti-aging.html">항노화 / 비타민</a>
+      <li class="active">
+        <a href="anti-aging.html" class="current">항노화 / 비타민</a>
       </li>
 
       <li><a href="chronic-disease.html">만성질환 클리닉</a></li>
@@ -109,24 +186,24 @@
   <!-- Mobile nav backdrop -->
   <div class="nav-backdrop" id="navBackdrop"></div>
 
-  <!-- ═══ PAGE HERO (CREAM) ═══ -->
-  <section class="page-hero" style="--hero-bg: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80');">
+  <!-- ═══ PAGE HERO ═══ -->
+  <section class="page-hero" style="--hero-bg: url('https://cdn.imweb.me/upload/S20260108b9005a7eb27108217d3c5f349d.png');">
     <div class="page-hero-inner">
-      <div class="page-hero-eyebrow">Body Clinic · Endermologie</div>
-      <h1 class="page-hero-title">매끈한 피부 결을<br>만나다</h1>
-      <p class="page-hero-text">특허받은 롤링 기술로 피부와 지방층을 깊숙이 마사지하여<br>셀룰라이트를 효과적으로 케어하고<br>매끈한 피부 결을 만들어드립니다.</p>
+      <div class="page-hero-eyebrow">Anti-Aging &amp; Vitamin Clinic</div>
+      <h1 class="page-hero-title">안에서부터<br>젊어지는 변화</h1>
+      <p class="page-hero-text">오썸의원의 프리미엄 영양 주사 프로그램으로<br>피로 회복부터 항산화, 미백, 면역력까지<br>가장 빠르고 효과적인 방법으로 채워드립니다.</p>
       <div class="page-hero-divider"></div>
     </div>
   </section>
 
   <!-- ═══ SPECIAL CLINIC (DARK) ═══ -->
-  <section class="page-special" style="--special-bg: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1600&q=80');">
+  <section class="page-special" style="--special-bg: url('https://images.unsplash.com/photo-1610736702075-a0d5d1d8c12e?auto=format&fit=crop&w=1600&q=80');">
     <div class="page-special-inner">
       <div class="page-special-eyebrow">Special Awesome Clinic</div>
       <h2 class="page-special-title">특별한 <em>오썸클리닉</em></h2>
       <p class="page-special-text">
         오썸클리닉은 <strong>원장님과의 1:1 맞춤 상담 / 맞춤 시술</strong>을 진행하고 있습니다.<br>
-        고객 한 분 한 분 시술 전 디자인과 신체 측정을 꼼꼼히 하고,<br>
+        고객 한 분 한 분 시술 전 정확한 상담을 통해 가장 적합한 주사를 선택하고,<br>
         고객분들의 건강한 변화가 성공할 수 있도록 최선을 다한 관리와<br>
         효과적인 시술을 제안하여 만족감을 높여드릴 수 있도록 노력합니다.
       </p>
@@ -142,20 +219,20 @@
         </div>
         <div class="proc-circle">
           <div class="proc-circle-img">
-            <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/b9a22d23c21ae.jpeg" alt="시술 부위 확인 및 디자인">
+            <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/b9a22d23c21ae.jpeg" alt="주사 성분 선택">
           </div>
           <div class="proc-circle-caption">
             <span class="gold-line">Step · 02</span>
-            시술 부위<br>확인 및 디자인
+            주사 성분<br>선택 및 설계
           </div>
         </div>
         <div class="proc-circle">
           <div class="proc-circle-img">
-            <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/5dce4059e5873.jpeg" alt="시술 전·후 정밀 측정">
+            <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/5dce4059e5873.jpeg" alt="시술 전 정밀 확인">
           </div>
           <div class="proc-circle-caption">
             <span class="gold-line">Step · 03</span>
-            시술 전·후<br>정밀 측정
+            시술 전<br>정밀 확인
           </div>
         </div>
         <div class="proc-circle">
@@ -171,94 +248,129 @@
     </div>
   </section>
 
-  <section class="page-about">
-    <div class="page-about-inner">
-      <div class="about-grid">
-        <div class="about-image">
-          <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/a42b273515683.jpeg" alt="엔더몰로지">
-        </div>
-        <div class="about-text-col">
-          <div class="about-eyebrow">About Endermologie</div>
-          <h2 class="about-title">FDA 승인 <em>셀룰라이트 케어</em></h2>
-          <p class="about-text">엔더몰로지는 특허받은 롤링 헤드가 피부를 굴리고 들어올리는 마사지 기법으로, 셀룰라이트를 효과적으로 케어합니다. FDA 승인을 받은 안전한 시술로, 통증이나 부작용에 대한 부담 없이 받으실 수 있는 가장 자연스러운 체형 케어 방법입니다.</p>
-          <div class="about-list">
-            <div class="about-list-item">
-              <div class="about-list-num">01</div>
-              <div class="about-list-body">
-                <div class="about-list-title">정밀한 상담과 진단</div>
-                <div class="about-list-text">시술 전 환자의 상태를 정확히 파악합니다.</div>
-              </div>
-            </div>
-            <div class="about-list-item">
-              <div class="about-list-num">02</div>
-              <div class="about-list-body">
-                <div class="about-list-title">맞춤 시술 설계</div>
-                <div class="about-list-text">개인의 목표에 맞춰 가장 효과적인 시술을 제안합니다.</div>
-              </div>
-            </div>
-            <div class="about-list-item">
-              <div class="about-list-num">03</div>
-              <div class="about-list-body">
-                <div class="about-list-title">사후 관리까지</div>
-                <div class="about-list-text">시술 이후에도 변화를 함께 지킵니다.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ FEATURE / RECOMMEND ═══ -->
-  <section class="page-feature">
-    <div class="page-feature-inner">
-      <div class="page-feature-header">
-        <div class="page-feature-eyebrow">Recommend</div>
-        <h2 class="page-feature-title">엔더몰로지, <em>이런 분께 추천</em></h2>
-        <p class="page-feature-sub">
-          오썸의원의 엔더몰로지은(는)<br>
-          이런 분들께 가장 도움이 될 수 있습니다.
+  <!-- ═══ 주사 종류 그리드 ═══ -->
+  <section class="inject-section">
+    <div class="container">
+      <div class="sec-header">
+        <div class="sec-eyebrow">Anti-Aging Programs</div>
+        <h2 class="sec-title">오썸의원 <em>영양 주사 라인업</em></h2>
+        <p class="sec-desc">
+          피로 회복부터 미백, 항산화, 면역력 강화까지 —<br>
+          목적에 맞는 맞춤 영양 주사로 건강한 변화를 시작하세요.
         </p>
       </div>
-      <div class="recommend-grid">
-        <div class="rec-card">
-          <div class="rec-card-num">01</div>
-          <div class="rec-card-body">
-            <div class="rec-card-title">셀룰라이트가 고민인 분</div>
-            <div class="rec-card-text">깊은 마사지 기법으로 셀룰라이트를 효과적으로 케어합니다.</div>
+
+      <div class="inject-grid">
+
+        <div class="inject-card">
+          <div class="inject-card-divider"></div>
+          <div class="inject-card-num">— 01</div>
+          <div class="inject-card-body">
+            <div class="inject-card-en">Garlic Injection</div>
+            <h3 class="inject-card-title">마늘주사</h3>
+            <p class="inject-card-desc">고용량 비타민 B1 성분으로 피로를 해소하고 활력과 에너지를 채워주는 오썸의원의 클래식한 영양 주사입니다. 만성 피로나 체력 저하를 느끼는 분께 가장 추천드리는 시그니처 주사입니다.</p>
+            <a href="garlic-injection.html" class="inject-card-link">자세히 보기 →</a>
           </div>
         </div>
-        <div class="rec-card">
-          <div class="rec-card-num">02</div>
-          <div class="rec-card-body">
-            <div class="rec-card-title">피부 결이 고민인 분</div>
-            <div class="rec-card-text">오렌지 껍질 같은 피부 결을 매끈하게 정돈해 드립니다.</div>
+
+        <div class="inject-card">
+          <div class="inject-card-divider"></div>
+          <div class="inject-card-num">— 02</div>
+          <div class="inject-card-body">
+            <div class="inject-card-en">Mega Vitamin C</div>
+            <h3 class="inject-card-title">메가 비타민C 주사</h3>
+            <p class="inject-card-desc">고함량 비타민 C를 직접 주입하여 강력한 항산화 효과와 피부 미백, 면역력 강화를 동시에 경험하실 수 있습니다. 경구 섭취보다 훨씬 빠르고 효과적으로 비타민 C를 전달합니다.</p>
+            <a href="mega-vitaminc.html" class="inject-card-link">자세히 보기 →</a>
           </div>
         </div>
-        <div class="rec-card">
-          <div class="rec-card-num">03</div>
-          <div class="rec-card-body">
-            <div class="rec-card-title">림프 순환 개선이 필요한 분</div>
-            <div class="rec-card-text">림프 순환을 활성화해 부기를 자연스럽게 케어합니다.</div>
+
+        <div class="inject-card">
+          <div class="inject-card-divider"></div>
+          <div class="inject-card-num">— 03</div>
+          <div class="inject-card-body">
+            <div class="inject-card-en">Antioxidant Injection</div>
+            <h3 class="inject-card-title">항산화 주사</h3>
+            <p class="inject-card-desc">다양한 항산화 성분으로 활성산소를 제거하고 노화를 늦춰주는 안티에이징 영양 주사입니다. 세포 손상을 방지하고 안에서부터 젊음을 지켜드리는 시그니처 케어입니다.</p>
+            <a href="antioxidant.html" class="inject-card-link">자세히 보기 →</a>
           </div>
         </div>
-        <div class="rec-card">
-          <div class="rec-card-num">04</div>
-          <div class="rec-card-body">
-            <div class="rec-card-title">통증 없는 시술을 원하는 분</div>
-            <div class="rec-card-text">편안한 마사지 형태로 부담 없이 받으실 수 있습니다.</div>
+
+        <div class="inject-card">
+          <div class="inject-card-divider"></div>
+          <div class="inject-card-num">— 04</div>
+          <div class="inject-card-body">
+            <div class="inject-card-en">Nutrition Injection</div>
+            <h3 class="inject-card-title">고영양 주사</h3>
+            <p class="inject-card-desc">필수 비타민과 미네랄, 아미노산을 한 번에 공급하는 종합 영양 주사로 가장 빠르게 컨디션을 회복합니다. 바쁜 일상 속 균형 잡힌 영양 섭취가 어려운 분께 추천드립니다.</p>
+            <a href="nutrition-injection.html" class="inject-card-link">자세히 보기 →</a>
           </div>
         </div>
+
+        <div class="inject-card">
+          <div class="inject-card-divider"></div>
+          <div class="inject-card-num">— 05</div>
+          <div class="inject-card-body">
+            <div class="inject-card-en">Brain Injection</div>
+            <h3 class="inject-card-title">브레인 주사</h3>
+            <p class="inject-card-desc">뇌 기능과 기억력 향상, 집중력 개선에 도움을 주는 신경 영양 성분으로 구성된 주사입니다. 집중력 저하, 기억력 감퇴, 만성 피로로 고민이신 분들께 도움이 됩니다.</p>
+            <a href="brain-injection.html" class="inject-card-link">자세히 보기 →</a>
+          </div>
+        </div>
+
+        <div class="inject-card">
+          <div class="inject-card-divider"></div>
+          <div class="inject-card-num">— 06</div>
+          <div class="inject-card-body">
+            <div class="inject-card-en">Cinderella Injection</div>
+            <h3 class="inject-card-title">신데렐라 주사</h3>
+            <p class="inject-card-desc">강력한 항산화 성분으로 피부톤을 밝게 하고 안에서부터 맑고 투명한 피부를 만들어주는 가장 사랑받는 인기 영양 주사입니다. 칙칙한 피부톤 개선에 탁월합니다.</p>
+            <a href="cinderella-injection.html" class="inject-card-link">자세히 보기 →</a>
+          </div>
+        </div>
+
+        <div class="inject-card">
+          <div class="inject-card-divider"></div>
+          <div class="inject-card-num">— 07</div>
+          <div class="inject-card-body">
+            <div class="inject-card-en">Princess Injection</div>
+            <h3 class="inject-card-title">백성공주 주사</h3>
+            <p class="inject-card-desc">엄선된 미백 성분과 항산화 영양소로 더욱 화사하고 맑은 피부톤을 완성해 주는 프리미엄 주사입니다. 신데렐라주사보다 한 단계 강화된 처방으로 더욱 빠른 변화를 경험하실 수 있습니다.</p>
+            <a href="princess-injection.html" class="inject-card-link">자세히 보기 →</a>
+          </div>
+        </div>
+
+        <div class="inject-card">
+          <div class="inject-card-divider"></div>
+          <div class="inject-card-num">— 08</div>
+          <div class="inject-card-body">
+            <div class="inject-card-en">Vitamin D Injection</div>
+            <h3 class="inject-card-title">비타민D 주사</h3>
+            <p class="inject-card-desc">현대인에게 부족한 비타민 D를 고함량으로 보충하여 면역력과 뼈 건강을 동시에 지켜드리는 주사입니다. 실내 생활이 많아 햇빛 노출이 부족한 분께 특히 추천드립니다.</p>
+            <a href="vitamind.html" class="inject-card-link">자세히 보기 →</a>
+          </div>
+        </div>
+
+        <div class="inject-card">
+          <div class="inject-card-divider"></div>
+          <div class="inject-card-num">— 09</div>
+          <div class="inject-card-body">
+            <div class="inject-card-en">Multi Vitamin</div>
+            <h3 class="inject-card-title">멀티 비타민 주사</h3>
+            <p class="inject-card-desc">다양한 비타민과 미네랄을 균형 있게 공급하여 종합적인 컨디션 관리에 도움을 드리는 균형 잡힌 영양 주사입니다. 전체적인 건강 관리와 컨디션 유지에 도움이 됩니다.</p>
+            <a href="multi-vitamin.html" class="inject-card-link">자세히 보기 →</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- ═══ CTA ═══ -->
-  <section class="page-cta" style="--cta-bg: url('https://images.unsplash.com/photo-1599058917765-a780eda07a3e?auto=format&fit=crop&w=1600&q=80');">
+  <section class="page-cta" style="--cta-bg: url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=1600&q=80');">
     <div class="page-cta-inner">
       <div class="page-cta-eyebrow">Reserve Now</div>
-      <h2 class="page-cta-title">매끈한 피부 결, <em>엔더몰로지로</em></h2>
-      <p class="page-cta-text">FDA 승인을 받은 안전한 셀룰라이트 케어.<br>오썸의원에서 가장 자연스러운 변화를 경험하세요.</p>
+      <h2 class="page-cta-title">나에게 맞는 주사,<br><em>오썸의원과 함께</em></h2>
+      <p class="page-cta-text">원장님과의 1:1 상담으로 가장 적합한 영양 주사를 찾아드립니다.<br>오늘 더 건강한 변화를 시작하세요.</p>
       <div class="page-cta-buttons">
         <a href="tel:0319019909" class="cta-btn cta-btn-primary">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
@@ -292,8 +404,8 @@
           <ul>
             <li><a href="obesity-drug.html">비만 / 체형 클리닉</a></li>
             <li><a href="skin-pigment.html">피부 클리닉</a></li>
-            <li><a href="garlic-injection.html">항노화 / 비타민</a></li>
-            <li><a href="pneumococcal.html">성인 예방접종</a></li>
+            <li><a href="anti-aging.html">항노화 / 비타민</a></li>
+            <li><a href="vaccination.html">성인 예방접종</a></li>
             <li><a href="smoking-cessation.html">금연 클리닉</a></li>
           </ul>
         </div>
@@ -346,8 +458,6 @@
       if (window.scrollY > 600) toTop.classList.add('show');
       else toTop.classList.remove('show');
     });
-
-    // Mobile menu toggle
     (function(){
       var toggle = document.getElementById('menuToggle');
       var navWrap = document.getElementById('navWrapper');

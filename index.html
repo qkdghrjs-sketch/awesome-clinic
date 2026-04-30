@@ -868,6 +868,34 @@
       line-height: 1.85; font-weight: 300;
     }
 
+    /* ═══ GALLERY · 클리닉 둘러보기 ═══ */
+    .gallery-section {
+      padding: 120px 0;
+      background: var(--cream);
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto auto;
+      gap: 12px;
+    }
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 4px;
+      aspect-ratio: 4/3;
+    }
+    .gallery-item--wide {
+      grid-column: span 2;
+      aspect-ratio: 16/9;
+    }
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+
     /* ═══ SECTION 6 · INFO (Hours & Map) ═══ */
     .info {
       padding: 140px 0;
@@ -1220,6 +1248,10 @@
       .why-title { font-size: 13.5px; margin-bottom: 5px; }
       .why-text { font-size: 12px; line-height: 1.65; }
 
+      /* gallery */
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-item--wide { grid-column: span 2; }
+
       /* hours */
       .info-grid { grid-template-columns: 1fr; gap: 20px; }
       .hours-card { padding: 34px 24px; }
@@ -1243,6 +1275,8 @@
       .feat-thumb { width: 100%; height: 160px; aspect-ratio: unset; }
       .clinic-card { flex-direction: column; align-items: flex-start; }
       .clinic-card-img { width: 100%; height: 150px; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item--wide { grid-column: span 1; aspect-ratio: 4/3; }
       .hours-card { padding: 24px 18px; }
     }
   </style>
@@ -1297,7 +1331,7 @@
         <ul class="dropdown">
           <li><a href="greeting.html">인사말</a></li>
           <li><a href="#info">진료안내 / 오시는길</a></li>
-          <li><a href="#">클리닉 둘러보기</a></li>
+          <li><a href="#gallery">클리닉 둘러보기</a></li>
         </ul>
       </li>
       <li>
@@ -1330,18 +1364,7 @@
         </ul>
       </li>
       <li>
-        <a href="#">항노화 / 비타민</a>
-        <ul class="dropdown">
-          <li><a href="garlic-injection.html">마늘주사</a></li>
-          <li><a href="mega-vitaminc.html">메가 비타민C주사</a></li>
-          <li><a href="antioxidant.html">항산화주사</a></li>
-          <li><a href="nutrition-injection.html">고영양주사</a></li>
-          <li><a href="brain-injection.html">브레인주사</a></li>
-          <li><a href="cinderella-injection.html">신데렐라주사</a></li>
-          <li><a href="princess-injection.html">백성공주주사</a></li>
-          <li><a href="vitamind.html">비타민D주사</a></li>
-          <li><a href="multi-vitamin.html">멀티 비타민주사</a></li>
-        </ul>
+        <a href="anti-aging.html">항노화 / 비타민</a>
       </li>
 
       <li><a href="chronic-disease.html">만성질환 클리닉</a></li>
@@ -1360,7 +1383,7 @@
 
     <!-- Slide 1 — Body Clinic -->
     <div class="slide active">
-      <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1920&q=80');"></div>
+      <div class="slide-bg" style="background-image: url('https://cdn.imweb.me/upload/S20260108b9005a7eb271021bd14a7cad07.png');"></div>
       <div class="slide-content">
         <div class="slide-text">
           <div class="slide-eyebrow">Body Clinic</div>
@@ -1382,7 +1405,7 @@
 
     <!-- Slide 2 — Skin Clinic -->
     <div class="slide">
-      <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1920&q=80');"></div>
+      <div class="slide-bg" style="background-image: url('https://cdn.imweb.me/upload/S20260108b9005a7eb271075eb6e33982eb.png');"></div>
       <div class="slide-content">
         <div class="slide-text">
           <div class="slide-eyebrow">Skin Clinic</div>
@@ -1452,7 +1475,7 @@
     <div class="container">
       <div class="philosophy-grid">
         <div class="philosophy-image">
-          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80" alt="오썸의원 진료 모습">
+          <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb271032bbf5b5969ea.png" alt="오썸의원 진료 모습">
         </div>
         <div class="philosophy-text">
           <div class="sec-eyebrow left">Our Philosophy</div>
@@ -1517,8 +1540,8 @@
 
       <div class="clinics-grid">
 
-        <a href="#" class="clinic-card">
-          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80" alt="비만 / 체형 클리닉">
+        <a href="obesity-drug.html" class="clinic-card">
+          <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710e0dcf14fb95c8.png" alt="비만 / 체형 클리닉">
           <div class="clinic-card-body">
             <span class="clinic-card-num">— 01</span>
             <div class="clinic-card-en">Body Clinic</div>
@@ -1528,8 +1551,8 @@
           </div>
         </a>
 
-        <a href="#" class="clinic-card">
-          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80" alt="피부 클리닉">
+        <a href="skin-pigment.html" class="clinic-card">
+          <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb27100e62bd1966866.png" alt="피부 클리닉">
           <div class="clinic-card-body">
             <span class="clinic-card-num">— 02</span>
             <div class="clinic-card-en">Skin Clinic</div>
@@ -1539,8 +1562,8 @@
           </div>
         </a>
 
-        <a href="#" class="clinic-card">
-          <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=900&q=80" alt="항노화 클리닉">
+        <a href="anti-aging.html" class="clinic-card">
+          <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb27108217d3c5f349d.png" alt="항노화 클리닉">
           <div class="clinic-card-body">
             <span class="clinic-card-num">— 03</span>
             <div class="clinic-card-en">Anti-Aging</div>
@@ -1686,7 +1709,7 @@
 
         <div class="why-card">
           <div class="why-thumb">
-            <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/5dce4059e5873.jpeg" alt="프리미엄 장비">
+            <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710d4f76774a15e3.png" alt="프리미엄 장비">
           </div>
           <div class="why-body">
             <div class="why-num">— 03</div>
@@ -1697,7 +1720,7 @@
 
         <div class="why-card">
           <div class="why-thumb">
-            <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/e189c9a23e657.jpeg" alt="지속 케어">
+            <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb271008e87ab651789.png" alt="지속 케어">
           </div>
           <div class="why-body">
             <div class="why-num">— 04</div>
@@ -1706,6 +1729,48 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       GALLERY · 클리닉 둘러보기
+       ═══════════════════════════════════════════════ -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="sec-header">
+        <div class="sec-eyebrow">Clinic Tour</div>
+        <h2 class="sec-title">클리닉 <em>둘러보기</em></h2>
+        <p class="sec-desc">오썸의원의 진료 현장과 클리닉 공간을 소개합니다.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-item--wide">
+          <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb271021bd14a7cad07.png" alt="오썸의원 클리닉">
+        </div>
+        <div class="gallery-item">
+          <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb271075eb6e33982eb.png" alt="오썸의원 클리닉">
+        </div>
+        <div class="gallery-item">
+          <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb271032bbf5b5969ea.png" alt="오썸의원 진료">
+        </div>
+        <div class="gallery-item">
+          <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710e0dcf14fb95c8.png" alt="비만/체형 클리닉">
+        </div>
+        <div class="gallery-item">
+          <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb27100e62bd1966866.png" alt="피부 클리닉">
+        </div>
+        <div class="gallery-item">
+          <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710d4f76774a15e3.png" alt="프리미엄 장비">
+        </div>
+        <div class="gallery-item">
+          <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb271008e87ab651789.png" alt="케어 서비스">
+        </div>
+        <div class="gallery-item">
+          <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710007c9a6c34aa4.png" alt="금연클리닉">
+        </div>
+        <div class="gallery-item">
+          <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb27108217d3c5f349d.png" alt="항노화 주사">
+        </div>
       </div>
     </div>
   </section>
@@ -1816,7 +1881,7 @@
             <li><a href="greeting.html">인사말</a></li>
             <li><a href="#info">진료 안내</a></li>
             <li><a href="#info">오시는 길</a></li>
-            <li><a href="#">클리닉 둘러보기</a></li>
+            <li><a href="#gallery">클리닉 둘러보기</a></li>
             <li><a href="http://pf.kakao.com/_wPhDxl" target="_blank">카카오 상담</a></li>
           </ul>
         </div>

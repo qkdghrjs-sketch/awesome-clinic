@@ -137,6 +137,12 @@
 
   <!-- 항노화 / 비타민 -->
   <url>
+    <loc>https://awesome-clinic.vercel.app/anti-aging.html</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://awesome-clinic.vercel.app/garlic-injection.html</loc>
     <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
