@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>건강검진센터 · 오썸의원</title>
+  <meta name="description" content="오썸의원 건강검진센터 — 종합검진·공단검진·암검진. 소화기내시경 전문의·내과 전문의가 직접 시행하는 믿을 수 있는 건강검진.">
+  <meta name="naver-site-verification" content="c2932a0f93cac8c1eef86646c02313614ce1c5ee" />
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="오썸의원">
+  <link rel="canonical" href="https://awesome-clinic.vercel.app/health-checkup.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="오썸의원">
+  <meta property="og:title" content="건강검진센터 · 오썸의원">
+  <meta property="og:description" content="오썸의원 건강검진센터 — 종합검진·공단검진·암검진. 소화기내시경 전문의·내과 전문의가 직접 시행하는 믿을 수 있는 건강검진.">
+  <meta property="og:url" content="https://awesome-clinic.vercel.app/health-checkup.html">
+  <meta property="og:image" content="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/8063c728fb8a8.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="건강검진센터 · 오썸의원">
+  <meta name="twitter:description" content="오썸의원 건강검진센터 — 종합검진·공단검진·암검진. 소화기내시경 전문의·내과 전문의가 직접 시행하는 믿을 수 있는 건강검진.">
+  <meta name="twitter:image" content="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/8063c728fb8a8.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=Noto+Serif+KR:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/clinic-style.css">
+  <style>
+    /* ── 정보 테이블 섹션 ── */
+    .info-section { padding: 88px 0 100px; background: #faf9f7; }
+    .info-section-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .info-section-header { text-align: center; margin-bottom: 52px; }
+    .info-eyebrow {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px; letter-spacing: 0.2em;
+      color: #b09060; text-transform: uppercase; margin-bottom: 12px;
+    }
+    .info-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: clamp(20px, 2.8vw, 28px);
+      font-weight: 600; color: #1a1a1a; line-height: 1.45;
+    }
+    .info-title em { font-style: normal; color: #b09060; }
+    .info-sub { margin-top: 12px; font-size: 15px; color: #666; line-height: 1.7; }
+    /* 테이블 래퍼 */
+    .info-table-block { margin-bottom: 48px; }
+    .info-table-block:last-child { margin-bottom: 0; }
+    .info-block-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 18px; font-weight: 600; color: #2a2a2a;
+      margin-bottom: 18px; padding-bottom: 12px;
+      border-bottom: 2px solid #1e2a1e;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .info-block-title::before {
+      content: '';
+      display: inline-block;
+      width: 6px; height: 6px;
+      background: #d4b882; border-radius: 50%;
+    }
+    .info-table-wrap { overflow-x: auto; }
+    .info-table {
+      width: 100%; border-collapse: collapse;
+      font-size: 14px; min-width: 480px;
+    }
+    .info-table th {
+      background: #1e2a1e; color: #d4b882;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px; letter-spacing: 0.1em;
+      padding: 13px 16px; border: 1px solid #2e3e2e;
+      text-align: center;
+    }
+    .info-table td {
+      padding: 12px 16px; border: 1px solid #ddd6c8;
+      vertical-align: middle; line-height: 1.75; color: #333;
+    }
+    .info-table td.tc { text-align: center; font-weight: 500; color: #444; }
+    .info-table tr:nth-child(even) td { background: #faf7f2; }
+    /* 주의사항 섹션 */
+    .notice-section { padding: 88px 0 100px; background: #fff; }
+    .notice-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .notice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    @media (max-width: 760px) { .notice-grid { grid-template-columns: 1fr; } }
+    .notice-block {}
+    .notice-block-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 18px; font-weight: 600; color: #1e2a1e;
+      margin-bottom: 20px; padding-bottom: 12px;
+      border-bottom: 2px solid #d4b882;
+    }
+    .notice-list { list-style: none; padding: 0; margin: 0; }
+    .notice-list li {
+      padding: 12px 0 12px 28px; position: relative;
+      font-size: 14px; color: #444; line-height: 1.8;
+      border-bottom: 1px solid #f0ebe0;
+    }
+    .notice-list li:last-child { border-bottom: none; }
+    .notice-list li::before {
+      content: '';
+      position: absolute; left: 0; top: 18px;
+      width: 14px; height: 14px;
+      border: 1.5px solid #c8a96e;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #d4b882 0%, #b09060 100%);
+    }
+    /* 암검진 카드 */
+    .cancer-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px; margin-top: 16px;
+    }
+    .cancer-card {
+      border: 1px solid #ddd6c8;
+      border-radius: 4px; overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .cancer-card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
+    .cancer-card-head {
+      background: #1e2a1e;
+      padding: 14px 16px; text-align: center;
+    }
+    .cancer-card-head span {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 15px; font-weight: 600; color: #d4b882;
+    }
+    .cancer-card-body { padding: 18px 16px; text-align: center; background: #fff; }
+    .cancer-card-icon { font-size: 32px; margin-bottom: 10px; }
+    .cancer-card-who { font-size: 14px; font-weight: 600; color: #222; }
+    .cancer-card-freq { font-size: 12.5px; color: #b09060; margin: 3px 0 12px; }
+    .cancer-card-item {
+      font-size: 13px; color: #555; line-height: 1.65;
+      border-top: 1px solid #ede8de; padding-top: 12px; margin-top: 0;
+    }
+    /* 반응형 */
+    @media (max-width: 768px) {
+      .info-section { padding: 56px 0 68px; }
+      .info-section-inner { padding: 0 20px; }
+      .info-section-header { margin-bottom: 36px; }
+      .notice-section { padding: 56px 0 68px; }
+      .notice-inner { padding: 0 20px; }
+      .notice-grid { gap: 28px; }
+    }
+    @media (max-width: 480px) {
+      .info-section { padding: 48px 0 56px; }
+      .info-section-inner { padding: 0 16px; }
+      .notice-section { padding: 48px 0 56px; }
+      .notice-inner { padding: 0 16px; }
+      .info-block-title { font-size: 16px; }
+      .notice-block-title { font-size: 16px; }
+      .info-table { font-size: 13px; }
+      .notice-list li { font-size: 13.5px; }
+    }
+    .checkup-feature { padding: 88px 0 100px; background: #faf9f7; }
+    .cf-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .cf-header { text-align: center; margin-bottom: 52px; }
+    .cf-eyebrow {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px; letter-spacing: 0.2em;
+      color: #b09060; text-transform: uppercase; margin-bottom: 12px;
+    }
+    .cf-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: clamp(20px, 2.8vw, 28px);
+      font-weight: 600; color: #1a1a1a; line-height: 1.45;
+    }
+    .cf-title em { font-style: normal; color: #b09060; }
+    .cf-sub { margin-top: 12px; font-size: 15px; color: #666; line-height: 1.7; }
+    .cf-list { display: flex; flex-direction: column; gap: 0; }
+    .cf-item {
+      display: grid; grid-template-columns: 80px 1fr;
+      gap: 28px; align-items: start;
+      padding: 32px 0; border-bottom: 1px solid #ede8de;
+    }
+    .cf-item:last-child { border-bottom: none; }
+    .cf-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px; font-weight: 600; color: #ddd4c0;
+      line-height: 1; padding-top: 4px;
+    }
+    .cf-item-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 17px; font-weight: 600; color: #1e2a1e;
+      margin-bottom: 8px;
+    }
+    .cf-item-desc { font-size: 14px; color: #555; line-height: 1.85; }
+    @media (max-width: 768px) {
+      .checkup-feature { padding: 56px 0 68px; }
+      .cf-inner { padding: 0 20px; }
+      .cf-item { grid-template-columns: 56px 1fr; gap: 18px; padding: 24px 0; }
+      .cf-num { font-size: 32px; }
+      .cf-item-title { font-size: 16px; }
+    }
+    @media (max-width: 480px) {
+      .checkup-feature { padding: 48px 0 56px; }
+      .cf-inner { padding: 0 16px; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="top-left">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 월·화·금 09:30~18:30 · 수 09:30~20:30 · 토 09:30~15:00 · 목·일 휴무</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> 경기 고양시 일산동구 정발산로 23 3층 301호</span>
+      </div>
+      <div class="top-right">
+        <a href="tel:0319019909"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg> 031.901.9909</a>
+        <span class="divider-v"></span>
+        <a href="http://pf.kakao.com/_wPhDxl" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.58 2 10.94c0 2.8 1.86 5.27 4.66 6.67-.15.56-.96 3.58-1 3.73 0 .07.03.14.09.18.04.03.1.04.18-.01.25-.17 3.7-2.45 4.23-2.8.6.09 1.22.13 1.84.13 5.52 0 10-3.58 10-7.9S17.52 3 12 3z"/></svg> Kakao 상담</a>
+      </div>
+    </div>
+  </div>
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-left">Health Checkup</div>
+      <div class="header-center">
+        <a href="index.html"><img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/8063c728fb8a8.png" alt="오썸의원"></a>
+      </div>
+      <div class="header-right">
+        <a href="index.html#info" class="header-cta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>예약 / 상담</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="메뉴">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-wrapper" id="navWrapper">
+    <ul class="nav">
+      <li>
+        <a href="#">오썸클리닉 소개</a>
+        <ul class="dropdown">
+          <li><a href="greeting.html">인사말</a></li>
+          <li><a href="index.html#info">진료안내 / 오시는길</a></li>
+          <li><a href="gallery.html">클리닉 둘러보기</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">비만 / 체형클리닉</a>
+        <ul class="dropdown">
+          <li><a href="obesity-drug.html">비만약</a></li>
+          <li><a href="carboxy.html">카복시</a></li>
+          <li><a href="medium-frequency.html">중저주파</a></li>
+          <li><a href="high-frequency.html">고주파</a></li>
+          <li><a href="endermologie.html">엔더몰로지</a></li>
+          <li><a href="line-meso.html">라인메조주사</a></li>
+          <li><a href="hpl.html">나봄 HPL 주사</a></li>
+          <li><a href="micool.html">미쿨</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">피부클리닉</a>
+        <ul class="dropdown">
+          <li><a href="skin-pigment.html">기미 / 색소</a></li>
+          <li><a href="o2derm.html">오투덤 산소테라피</a></li>
+          <li><a href="andy-toning.html">앤디눈꽃토닝</a></li>
+          <li><a href="acne-scar.html">여드름 / 흉터</a></li>
+          <li><a href="wrinkle.html">주름 / 탄력</a></li>
+          <li><a href="redness.html">홍조 / 혈관</a></li>
+          <li><a href="skin-booster.html">스킨부스터</a></li>
+          <li><a href="silperm-x.html">실펌X</a></li>
+          <li><a href="doublo-gold.html">더블로골드</a></li>
+          <li><a href="exilis.html">엑실리스</a></li>
+          <li><a href="shemax.html">쉬맥스</a></li>
+        </ul>
+      </li>
+      <li><a href="anti-aging.html">항노화 / 비타민</a></li>
+      <li><a href="chronic-disease.html">만성질환 클리닉</a></li>
+      <li class="active">
+        <a href="#">건강검진 / 내과</a>
+        <ul class="dropdown">
+          <li><a href="health-checkup.html">건강검진센터</a></li>
+          <li><a href="endoscopy.html">내시경클리닉</a></li>
+          <li><a href="ultrasound.html">초음파클리닉</a></li>
+          <li><a href="internal-medicine.html">내과전문클리닉</a></li>
+        </ul>
+      </li>
+      <li><a href="vaccination.html">성인예방접종</a></li>
+      <li><a href="smoking-cessation.html">금연클리닉</a></li>
+    </ul>
+  </div>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+  <!-- ═══ PAGE HERO ═══ -->
+  <section class="page-hero" style="--hero-bg: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1600&q=80');">
+    <div class="page-hero-inner">
+      <div class="page-hero-eyebrow">Health Checkup Center · 건강검진</div>
+      <h1 class="page-hero-title">건강을 지키는<br>첫걸음</h1>
+      <p class="page-hero-text">종합검진 · 공단검진 · 암검진<br>내과 전문의가 직접 시행하는<br>오썸의원 건강검진센터</p>
+      <div class="page-hero-divider"></div>
+    </div>
+  </section>
+
+  <!-- ═══ 5가지 강점 배너 ═══ -->
+  <div class="program-banner">
+    <div class="program-banner-inner">
+      <div>
+        <div class="program-badge">Health Checkup · 건강검진센터</div>
+        <h2 class="program-title">오썸의원<br><em>건강검진센터의 5가지 강점</em></h2>
+        <p class="program-desc">
+          국민건강보험공단 검진 지정병원으로 일반검진부터 5대 암검진까지,<br>
+          소화기내시경·초음파 전문의가 직접 시행하여<br>
+          진단부터 치료까지 원스톱으로 케어해 드립니다.
+        </p>
+      </div>
+      <div class="program-features">
+        <div class="prog-feat">
+          <div class="prog-feat-num">01</div>
+          <div class="prog-feat-body">
+            <div class="prog-feat-title">국민건강보험공단 검진 지정병원</div>
+            <div class="prog-feat-text">일반건강검진 및 5대 암검진을 공단 지정병원으로서 시행합니다.</div>
+          </div>
+        </div>
+        <div class="prog-feat">
+          <div class="prog-feat-num">02</div>
+          <div class="prog-feat-body">
+            <div class="prog-feat-title">소화기내시경 세부전문의 직접 시행</div>
+            <div class="prog-feat-text">1만례 이상의 내시경 전문의가 직접 시행하며 당일 용종절제술도 가능합니다.</div>
+          </div>
+        </div>
+        <div class="prog-feat">
+          <div class="prog-feat-num">03</div>
+          <div class="prog-feat-body">
+            <div class="prog-feat-title">내과 전문의 직접 초음파</div>
+            <div class="prog-feat-text">최신 장비로 내과 전문의가 복부·갑상선·유방 초음파를 직접 시행합니다.</div>
+          </div>
+        </div>
+        <div class="prog-feat">
+          <div class="prog-feat-num">04</div>
+          <div class="prog-feat-body">
+            <div class="prog-feat-title">편리한 온라인 예약·대기 단축</div>
+            <div class="prog-feat-text">네이버·카카오 온라인 예약 및 사전 문진으로 대기시간을 최소화합니다.</div>
+          </div>
+        </div>
+        <div class="prog-feat">
+          <div class="prog-feat-num">05</div>
+          <div class="prog-feat-body">
+            <div class="prog-feat-title">여성 전용 검진실 운영</div>
+            <div class="prog-feat-text">여성 전문의·여성 방사선사가 자궁경부암·유방촬영 검사를 담당합니다.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 검진 프로세스 ═══ -->
+  <section class="page-special" style="--special-bg: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1600&q=80');">
+    <div class="page-special-inner">
+      <div class="page-special-eyebrow">Checkup Process</div>
+      <h2 class="page-special-title">건강검진 <em>진행 순서</em></h2>
+      <p class="page-special-text">예약부터 결과 상담까지 — 빠르고 편안하게 안내해 드립니다.</p>
+      <div class="process-circles">
+        <div class="proc-circle">
+          <div class="proc-circle-img">
+            <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/1d5cab64e3ed3.jpeg" alt="사전 예약·문진">
+          </div>
+          <div class="proc-circle-caption"><span class="gold-line">Step · 01</span>사전 예약<br>온라인 문진</div>
+        </div>
+        <div class="proc-circle">
+          <div class="proc-circle-img">
+            <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/b9a22d23c21ae.jpeg" alt="기본검사">
+          </div>
+          <div class="proc-circle-caption"><span class="gold-line">Step · 02</span>기본검사<br>채혈·측정·촬영</div>
+        </div>
+        <div class="proc-circle">
+          <div class="proc-circle-img">
+            <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/5dce4059e5873.jpeg" alt="내시경·초음파">
+          </div>
+          <div class="proc-circle-caption"><span class="gold-line">Step · 03</span>내시경<br>초음파 검사</div>
+        </div>
+        <div class="proc-circle">
+          <div class="proc-circle-img">
+            <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/e189c9a23e657.jpeg" alt="결과 상담">
+          </div>
+          <div class="proc-circle-caption"><span class="gold-line">Step · 04</span>결과 상담<br>케어플랜 수립</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 검진 종류 카드 ═══ -->
+  <section class="disease-section">
+    <div class="disease-section-inner">
+      <div class="disease-section-header">
+        <div class="disease-eyebrow">Comprehensive Checkup</div>
+        <h2 class="disease-title">오썸의원 <em>종합검진 항목</em></h2>
+        <p class="disease-sub">혈액 100종 · 내시경 · 초음파까지 한 번에 확인합니다.</p>
+      </div>
+      <div class="disease-grid">
+        <div class="disease-card">
+          <div class="disease-card-top">
+            <div class="disease-card-num">Checkup · 01</div>
+            <div class="disease-card-ko">기본 · 혈액 검사</div>
+            <div class="disease-card-en">Basic &amp; Blood Test</div>
+          </div>
+          <div class="disease-card-body">
+            <p class="disease-card-desc">기본 체위측정·심전도·흉부X선·골밀도와 혈액검사 100종(혈당, 간기능, 지질, 간염, 빈혈 등)으로 전신 건강 상태를 종합적으로 평가합니다.</p>
+            <div class="disease-card-list-title">주요 검사 항목</div>
+            <div class="disease-card-items">
+              <div class="disease-card-item">체위측정, 심전도, 흉부 X-선, 골밀도</div>
+              <div class="disease-card-item">혈당·당화혈색소, 간기능, 신기능, 지질</div>
+              <div class="disease-card-item">간염(A·B·C형), 성병(매독·HIV), 빈혈</div>
+              <div class="disease-card-item">소변검사 (Urine 10종 + Microscopy)</div>
+            </div>
+            <div class="disease-card-tags">
+              <span class="disease-tag">전신 건강 확인</span>
+              <span class="disease-tag">만성질환 조기 발견</span>
+            </div>
+          </div>
+        </div>
+        <div class="disease-card">
+          <div class="disease-card-top">
+            <div class="disease-card-num">Checkup · 02</div>
+            <div class="disease-card-ko">내시경 검사</div>
+            <div class="disease-card-en">Endoscopy</div>
+          </div>
+          <div class="disease-card-body">
+            <p class="disease-card-desc">소화기내시경 세부전문의가 직접 수면 위내시경을 시행합니다. 위·식도·십이지장 이상을 실시간으로 확인하며, 이상 소견 발견 시 당일 조직검사 및 헬리코박터 검사가 가능합니다.</p>
+            <div class="disease-card-list-title">검사 내용</div>
+            <div class="disease-card-items">
+              <div class="disease-card-item">수면(진정) 위내시경 — 불편감 최소화</div>
+              <div class="disease-card-item">식도·위·십이지장 전 구간 관찰</div>
+              <div class="disease-card-item">당일 조직검사 · 헬리코박터 검사</div>
+              <div class="disease-card-item">선택: 수면 대장내시경 · 용종절제술</div>
+            </div>
+            <div class="disease-card-tags">
+              <span class="disease-tag">위암 조기 발견</span>
+              <span class="disease-tag">세부전문의 직접 시행</span>
+            </div>
+          </div>
+        </div>
+        <div class="disease-card">
+          <div class="disease-card-top">
+            <div class="disease-card-num">Checkup · 03</div>
+            <div class="disease-card-ko">초음파 검사</div>
+            <div class="disease-card-en">Ultrasound</div>
+          </div>
+          <div class="disease-card-body">
+            <p class="disease-card-desc">내과 전문의가 직접 복부·갑상선·유방 초음파를 시행합니다. 방사선 노출 없이 주요 장기의 이상 유무를 실시간으로 확인할 수 있어 정확한 진단이 가능합니다.</p>
+            <div class="disease-card-list-title">검사 내용</div>
+            <div class="disease-card-items">
+              <div class="disease-card-item">복부초음파 — 간·담낭·췌장·신장·비장</div>
+              <div class="disease-card-item">갑상선초음파 — 결절·낭종 여부</div>
+              <div class="disease-card-item">유방초음파 — 여성 대상</div>
+              <div class="disease-card-item">선택: 경동맥·심장 초음파</div>
+            </div>
+            <div class="disease-card-tags">
+              <span class="disease-tag">방사선 없음</span>
+              <span class="disease-tag">전문의 직접 시행</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 공단검진 안내 ═══ -->
+  <section class="info-section">
+    <div class="info-section-inner">
+      <div class="info-section-header">
+        <div class="info-eyebrow">National Health Insurance · 공단검진</div>
+        <h2 class="info-title">국민건강보험공단검진 <em>안내</em></h2>
+        <p class="info-sub">오썸의원은 공단 지정병원으로 일반건강검진·암검진을 시행합니다.</p>
+      </div>
+      <div class="info-table-block">
+        <div class="info-block-title">일반건강검진 — 대상: 20세 이상 남녀 (2년/비사무직 1년, 비용 공단 전액 부담)</div>
+        <div class="info-table-wrap">
+          <table class="info-table">
+            <thead><tr><th>항목</th><th>검사 내용</th></tr></thead>
+            <tbody>
+              <tr><td class="tc">간질환</td><td>AST·ALT·감마지티피 — 간세포 손상 및 담도계 확인</td></tr>
+              <tr><td class="tc">공복혈당</td><td>공복혈당 측정을 통해 당뇨병 확인</td></tr>
+              <tr><td class="tc">신장질환</td><td>요단백, 혈청 크레아티닌, 혈색소, e-GFR 검사</td></tr>
+              <tr><td class="tc">흉부방사선</td><td>X-레이 촬영 — 폐암·폐결핵 등 폐 건강 확인</td></tr>
+              <tr><td class="tc">구강검진</td><td>치아우식증·치주질환 등 구강 건강 확인</td></tr>
+              <tr><td class="tc">기본계측</td><td>신장·체중·허리둘레·체질량지수·시력·청력·혈압 측정</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="info-table-block">
+        <div class="info-block-title">암검진 — 공단 90% · 수검자 10% 부담 (자궁경부암은 공단 전액 부담)</div>
+        <div class="cancer-cards-grid">
+          <div class="cancer-card">
+            <div class="cancer-card-head"><span>위암</span></div>
+            <div class="cancer-card-body">
+              <div class="cancer-card-icon">🫃</div>
+              <div class="cancer-card-who">40세 이상 남녀</div>
+              <div class="cancer-card-freq">(2년마다)</div>
+              <div class="cancer-card-item">위내시경</div>
+            </div>
+          </div>
+          <div class="cancer-card">
+            <div class="cancer-card-head"><span>대장암</span></div>
+            <div class="cancer-card-body">
+              <div class="cancer-card-icon">🫁</div>
+              <div class="cancer-card-who">50세 이상 남녀</div>
+              <div class="cancer-card-freq">(매년)</div>
+              <div class="cancer-card-item">분변잠혈검사(FOB)<br>대장내시경(양성 시)</div>
+            </div>
+          </div>
+          <div class="cancer-card">
+            <div class="cancer-card-head"><span>간암</span></div>
+            <div class="cancer-card-body">
+              <div class="cancer-card-icon">🫀</div>
+              <div class="cancer-card-who">40세 이상 고위험군</div>
+              <div class="cancer-card-freq">(6개월마다)</div>
+              <div class="cancer-card-item">간 초음파<br>알파태아단백 검사</div>
+            </div>
+          </div>
+          <div class="cancer-card">
+            <div class="cancer-card-head"><span>유방암</span></div>
+            <div class="cancer-card-body">
+              <div class="cancer-card-icon">🩺</div>
+              <div class="cancer-card-who">40세 이상 여성</div>
+              <div class="cancer-card-freq">(2년마다)</div>
+              <div class="cancer-card-item">유방 촬영 검사</div>
+            </div>
+          </div>
+          <div class="cancer-card">
+            <div class="cancer-card-head"><span>자궁경부암</span></div>
+            <div class="cancer-card-body">
+              <div class="cancer-card-icon">🔬</div>
+              <div class="cancer-card-who">20세 이상 여성</div>
+              <div class="cancer-card-freq">(2년마다)</div>
+              <div class="cancer-card-item">자궁경부 세포 검사</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="page-cta" style="--cta-bg: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1600&q=80');">
+    <div class="page-cta-inner">
+      <div class="page-cta-eyebrow">Reserve Now</div>
+      <h2 class="page-cta-title">건강검진, <em>오썸의원에서 시작하세요</em></h2>
+      <p class="page-cta-text">종합검진부터 국민건강보험공단 검진까지<br>내과 전문의가 직접 꼼꼼하게 검진해 드립니다.</p>
+      <div class="page-cta-buttons">
+        <a href="tel:0319019909" class="cta-btn cta-btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+          전화 상담
+        </a>
+        <a href="http://pf.kakao.com/_wPhDxl" target="_blank" class="cta-btn cta-btn-secondary">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.58 2 10.94c0 2.8 1.86 5.27 4.66 6.67-.15.56-.96 3.58-1 3.73 0 .07.03.14.09.18.04.03.1.04.18-.01.25-.17 3.7-2.45 4.23-2.8.6.09 1.22.13 1.84.13 5.52 0 10-3.58 10-7.9S17.52 3 12 3z"/></svg>
+          카카오 상담
+        </a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="https://cdn.imweb.me/upload/S20260108b9005a7eb2710/8063c728fb8a8.png" alt="오썸의원">
+          <div class="footer-tagline">— Awesome Clinic</div>
+          <p class="footer-desc">오썸의원은 비만/체형, 피부, 항노화, 만성질환, 건강검진, 내시경, 초음파, 내과전문 클리닉을 운영하는 종합 메디컬 클리닉입니다. 1:1 맞춤 진료로 가장 자연스러운 변화를 약속합니다.</p>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Clinic</div>
+          <ul>
+            <li><a href="obesity-drug.html">비만 / 체형 클리닉</a></li>
+            <li><a href="skin-pigment.html">피부 클리닉</a></li>
+            <li><a href="anti-aging.html">항노화 / 비타민</a></li>
+            <li><a href="chronic-disease.html">만성질환 클리닉</a></li>
+            <li><a href="health-checkup.html">건강검진센터</a></li>
+            <li><a href="endoscopy.html">내시경클리닉</a></li>
+            <li><a href="ultrasound.html">초음파클리닉</a></li>
+            <li><a href="internal-medicine.html">내과전문클리닉</a></li>
+            <li><a href="vaccination.html">성인 예방접종</a></li>
+            <li><a href="smoking-cessation.html">금연 클리닉</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">About</div>
+          <ul>
+            <li><a href="index.html">홈으로</a></li>
+            <li><a href="index.html#info">진료 안내</a></li>
+            <li><a href="index.html#info">오시는 길</a></li>
+            <li><a href="http://pf.kakao.com/_wPhDxl" target="_blank">카카오 상담</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Contact</div>
+          <p class="footer-info-line"><strong>TEL.</strong> 031.901.9909</p>
+          <p class="footer-info-line"><strong>SUB.</strong> 031.901.1024</p>
+          <p class="footer-info-line">경기 고양시 일산동구<br>정발산로 23, 3층 301호</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">© 2024 Ossom Clinic · All Rights Reserved</div>
+        <div>Premium Medical · Skin · Body · Vitality</div>
+      </div>
+    </div>
+  </footer>
+  <div class="float-actions">
+    <a href="http://pf.kakao.com/_wPhDxl" target="_blank" class="float-btn kakao" aria-label="카카오 상담">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.58 2 10.94c0 2.8 1.86 5.27 4.66 6.67-.15.56-.96 3.58-1 3.73 0 .07.03.14.09.18.04.03.1.04.18-.01.25-.17 3.7-2.45 4.23-2.8.6.09 1.22.13 1.84.13 5.52 0 10-3.58 10-7.9S17.52 3 12 3z"/></svg>
+    </a>
+    <a href="tel:0319019909" class="float-btn" aria-label="전화 상담">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+    <button class="float-btn top" id="toTop" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="맨 위로">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+  </div>
+  <script>
+    const navWrap = document.getElementById('navWrapper');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) navWrap.classList.add('scrolled');
+      else navWrap.classList.remove('scrolled');
+      const toTop = document.getElementById('toTop');
+      if (window.scrollY > 600) toTop.classList.add('show');
+      else toTop.classList.remove('show');
+    });
+    (function(){
+      var toggle = document.getElementById('menuToggle');
+      var navWrap = document.getElementById('navWrapper');
+      var backdrop = document.getElementById('navBackdrop');
+      if (!toggle) return;
+      function closeMenu(){
+        toggle.classList.remove('active');
+        navWrap.classList.remove('nav-open');
+        backdrop.classList.remove('active');
+        document.body.classList.remove('nav-open');
+      }
+      toggle.addEventListener('click', function(){
+        var isOpen = navWrap.classList.contains('nav-open');
+        if (isOpen) { closeMenu(); } else {
+          toggle.classList.add('active');
+          navWrap.classList.add('nav-open');
+          backdrop.classList.add('active');
+          document.body.classList.add('nav-open');
+        }
+      });
+      backdrop.addEventListener('click', closeMenu);
+    })();
+  </script>
+</body>
+</html>
